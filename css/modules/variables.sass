@@ -1,0 +1,824 @@
+
+//Name: variables.sass
+//Author: Latevaweb S.L.
+//Version: 1.0.0
+
+//-
+
+
+
+//0.T Tabla de contenidos
+//========================
+	
+	// 00. PASOS RESPONSIVE
+	// ---------------------------------
+
+	// 01. RETÍCULA
+	// ---------------------------------
+
+	// 02. GENERAL
+	// ---------------------------------
+		// 2.1 = Global
+		// 2.2 = Header
+		// 2.3 = Formatos de texto
+		// 2.4 = Links
+		// 2.5 = Fuentes
+		// 2.6 = Blocks (Sirven para definir backgrounde de fondo)
+		// 2.8 = Tipo de listas dinamica (1-> imagen derecha, 2-> Imagen arriba 100%)
+
+	// 03. LOGO
+	// ---------------------------------
+
+	// 04. NAV
+	// ---------------------------------
+
+	// 05. SUBMENÚ NAV
+	// ---------------------------------
+
+	// 06. LANGUAGE NAV
+	// ---------------------------------
+
+	// 07. SOCIAL
+	// ---------------------------------
+
+	// 08. FOOTER
+	// ---------------------------------
+
+	// 09. BOTONES
+	// ---------------------------------
+		//  9.1 Sizes
+		// 9.2 Colores & backgrounds
+
+	// 10. INPUTS, LABELS, TEXTAREAS, RADIOBUTTONS ...
+	// ---------------------------------
+
+	// 11. TABLES
+	// ---------------------------------
+
+	// 12. MÓDULOS (Owl,CBP,...)
+	// ---------------------------------
+
+	//===============================================
+
+	// 13. VARIABLES TIENDA (Solo tocar si es tienda)
+	// ---------------------------------
+		// 13.0 TerNav (ul li > ul li > ul li)
+
+
+// ========================================================================
+// 00. PASOS RESPONSIVE
+// ========================================================================
+
+$desktopBreakPoint: 978
+
+// ========================================================================
+// 01. RETÍCULA
+// ========================================================================
+
+$numCols: 12
+$containerWidth: 1254
+$medianil: 15
+
+$mainWidth: 70%
+$asideWidth: 30%
+$asideFloat: left
+
+$numColsSubcontainer: 8
+
+// ========================================================================
+// 02 GENERAL
+// ========================================================================
+ 
+// 2.1 = Global
+//---------------------------------------------------------------
+
+$activeFont1: 'open-sans-family'
+$activeFont2: 'aller-family'
+$activeFont3: 'roboto-family'
+$activeFont4: 'latevaweb_icons2'
+
+$fontSizeGlobal: 14px
+$fontSizePercent: 90%
+$lineHeightGlobal: 1.7em
+
+$BgBodyGlobal: #EB9044
+$BgContentGlobal: #FFF
+
+$colorGlobal: #62706c
+$secColorGlobal: #aaa
+
+$fontFamilyGlobal: 'open_sanslight' // Texto
+$secFontFamilyGlobal: 'allerregular' // Principal titulares
+$thrFontFamilyGlobal: 'allerbold' // Por si tenemos otra familia a parte de las principales
+
+$roundedGlobal: 5px // Principal titulares
+$marginBottomTextGlobal: 1.2em // Margen inferior para todos los elementos (p, li, table)
+
+$mapHeight: 810px // Altura Gmap
+
+// 2.2 = Header
+//--------------------------------------------------------------- 
+
+$heightHeader: 260px
+$bgHeader: url("../images/backgrounds/bgHeader.jpg") repeat-x 0 100%, url("../images/backgrounds/bgHeaderTop.jpg") repeat-x 0 0
+
+// 2.3 = Formatos de texto
+//---------------------------------------------------------------
+
+$fontSizeP: 1em
+$fontSizeEm: 1em
+$fontSizeBq: 1.2em // Blockquote
+$fontWeightStrong:'allerbold' // Peso de las Strong
+
+// 2.4 = Links
+//---------------------------------------------------------------
+
+$fontSizeLinks: 1
+$colorLinks: #666666
+$colorLinksHover: #666666
+
+// 2.5 = Fuentes
+//---------------------------------------------------------------
+
+// H1
+
+$fontH1Size: $fontSizeGlobal * 4
+$fontH1Family: 'aller_lightregular'
+
+$fontH1Margin: 1em 0
+$fontH1Padding: 1em 0
+
+$fontH1Align: center
+$textTransformH1: none
+
+$fontH1Color: #E67A1D
+$fontH1Bg: url('../images/backgrounds/h2bg.jpg') repeat-x, url('../images/backgrounds/filleth2.jpg') repeat-x 0 100%
+
+//H2
+
+$fontH2Size: $fontSizeGlobal * 1.6
+$fontH2Family: $secFontFamilyGlobal
+
+$fontH2Margin: 1em 0
+$fontH2Padding: 1em 0
+
+$fontH2Align: center
+$textTransformH2: uppercase
+
+$fontH2Color: #62706c
+$fontH2Bg: url('../images/backgrounds/h2bg.jpg') repeat-x, url('../images/backgrounds/filleth2.jpg') repeat-x 0 100%
+
+//H3
+
+$fontH3Size: $fontSizeGlobal * 1.3
+$fontH3Family: 'allerbold'
+
+$fontH3Margin: 0 0 1em
+$fontH3Padding: 0 0
+
+$fontH3Align: left
+$textTransformH3: inherit
+
+$fontH3Color: #232323
+$fontH3Bg: none
+
+
+// 2.6 = Blocks (Sirven para definir background de de fondo)
+//---------------------------------------------------------------
+
+$defBgBlock:#EEA366
+$secBgBlock:#F4F4F4
+$thrBgBlock:#62706c
+
+
+// 2.8 = Tipo de listas dinamica (1-> imagen derecha, 2-> Imagen arriba 100%)
+//---------------------------------------------------------------
+
+$typeList: 2
+
+// ========================================================================
+// 03. LOGO
+// ========================================================================
+
+
+$logoCenter: true // Marcamos true si esta centrado o false si no lo esta
+
+$widthLogo: 17%
+$heightLogo: 133px
+
+// Posiciones
+
+$logoLeft: 10px // Tocar solo si no esta centrado
+$logoTop: 40px
+
+// ========================================================================
+// 04. NAV
+// ========================================================================
+
+$widthNav: 83%
+$generalPaddingNav: 20px 0
+$generalAlignNav: center
+$generalBgNav: none
+$textTransformNav: uppercase 
+
+// Posiciones
+
+$topNav: inherit
+$lefNav: 0px
+$rightNav: inherit
+$bottomNav: 16px
+
+/* Nav > ul > li > a */
+
+$colorNav: #fff
+$colorNavHover: #fff
+$colorNavCurrent: #fff
+
+$bgNav: none
+$bgNavHover: none
+$bgNavCurrent: none
+
+$fontFamilyNav: 'allerbold'
+$fontFamilyNavHover: 'allerbold'
+$fontFamilyNavCurrent: 'allerbold'
+
+$fontSizeNav: 1.1em
+$paddingNav: 20px
+
+
+// ========================================================================
+// 05. SUBMENÚ NAV
+// ========================================================================
+
+$SecNavCenter: false // Ponemos true si esta centrado i false si no
+
+$widthSecNav: 275px
+
+// Posiciones
+
+$topSecNav: 39px
+$leftSecNav: 0
+
+$bgSecNav: #FFF // ul background
+$generalPaddingSecNav: 20px // ul padding
+$boxShadowSecNav: 0 0 2px rgba(0,0,0,.2) // ul boxShadow
+
+/* Nav ul li ul li a */
+
+$desplegado: true // Por si lo queremos abierto o cerrado (true o false)
+
+$colorSecNav: #232323
+$colorSecNavHover: #444
+$colorSecNavCurrent: #F3f3f3
+$bgTextSecNav: none
+
+$fontFamilySecNav: 'allerbold'
+$fontSizeSecNav: 1em
+$paddingSecNav: 0
+$textTransformSecNav: uppercase
+$textAlignSecNav: left
+
+// ========================================================================
+// 06. LANGUAGE NAV
+// ========================================================================
+
+$fontFamilyLang: 'open_sanslight'
+$widthLang: 72px
+$alignLang: right
+$textTransformLang: uppercase
+
+// Posiciones
+
+$langTop: 5px
+$langRight: inherit
+$langBottom: inherit
+$langLeft: 0
+
+// Lang ul li a
+
+$colorLang: #6b6b6b
+$colorLangHover: #c15572
+$colorLangCurrent: #c15572
+
+$bgLang: none
+$bgLangHover: none
+$bgLangCurrent: none
+
+
+$paddingLang: 0 1px
+$fontSizeLang: .9em
+
+
+// ========================================================================
+// 07. SOCIAL
+// ========================================================================
+
+
+// Posiciones
+
+$socialTop: 10px
+$socialRight: inherit
+$socialBottom: inherit
+$socialLeft: 100px
+
+/* Lang ul li a */
+
+// $colorSocial: #CCC
+// $colorSocialHover: #DDD
+// $colorSocialCurrent: #F3f3f3
+
+// $paddingSocial: 0 0
+
+/* Sprites */
+
+// $bgSpriteSocial: url("../images/icons/social16.svg") no-repeat
+// $withHeightSprite: 16 // Definimos with y height de cada item del sprite
+
+/* Type */
+$iconsize: 32px
+$coloriconsize: #232323
+
+
+// ========================================================================
+// 08. FOOTER
+// ========================================================================
+
+$bgFooter: #232323
+$paddingFooter: 40px 30px 75px
+
+//H3 footer
+
+$footerH3Size: $fontSizeGlobal * 1.2
+$footerH3Color: #FFF
+$footerH3TextTransform: uppercase
+$footerH3FontFamily: $fontH3Family
+
+/* Footer ul li a */
+
+$colorFooter: #CCC
+$colorFooterHover: #DDD
+$colorFooterActive: #F3f3f3
+
+$paddingTextFooter: 0 0
+
+
+// ========================================================================
+// 09. BOTONES
+// ========================================================================
+ 
+$paddingBtn: 12px 0
+$fontSizeBtn: 1.1em
+$fontFamilyBtn: 'open_sanssemibold'
+$borderRadiusBtn: 3px
+$borderBtn: none
+$textTransformBtn: uppercase
+
+//  9.1 Sizes
+//--------------------------------------------------------------- 
+
+$btnVerySmall: 90px
+$btnSmall: 110px
+$btnMedium: 130px
+$btnLarge: 180px
+$btnXl: 300px
+
+// 9.2 Colores & backgrounds
+//--------------------------------------------------------------- 
+
+/* Link btn */
+
+$linkColorBtn: #E67A1D
+$linkBgBtn: #fff
+$linkColorBtnHover: #E67A1D
+$linkBgBtnHover: #fff
+
+/* Default */
+
+$defColorBtn: #FFF
+$defBgBtn: #808080
+$defColorBtnHover: #FFF
+$defBgBtnHover: #aaa
+
+/* alert btn */
+
+$alertColorBtn: #FFF
+$alertBgBtn: #ed4040
+$alertColorBtnHover: #FFF
+$alertBgBtnHover: #878787
+
+/* Submit btn */
+
+$submitColorBtn: #FFF
+$submitBgBtn: #c15572
+$submitColorBtnHover: #FFF
+$submitBgBtnHover: #aa405c
+
+/* New btn */
+
+$newColorBtn: #FFF
+$newBgBtn: #232323
+$newColorBtnHover: #232323
+$newBgBtnHover: #232323
+
+/* Agotado btn (solo para tiendas) */
+
+$agotadoColorBtn: #aaa
+$agotadoBgBtn: #f5f5f5
+$agotadoColorBtnHover: #aaa
+$agotadoBgBtnHover: #f5f5f5
+
+
+// ========================================================================
+// 10. INPUTS, LABELS, TEXTAREAS, RADIOBUTTONS ...
+// ========================================================================
+
+/* Forms */
+
+$liFormWidth: 50% // anchura por defecto en % de los li
+$liFormPadding: 0 .5em // Padding dentro de la li
+
+/* Inputs */
+
+$marginBottomInputs: 0
+
+$fontSizeInputs: 1em
+$fontFamilyInputs: 'open_sanssemibold'
+
+$imputsColors: #232323
+$placeholderColors: #CCCCCC
+
+$marginInputs: 0 0 20px
+$paddingInputs: 10px
+
+$inputsborders: solid 1px #ddd
+$bradiusInputs: 2px
+
+/* Labels */
+
+$fontSizeLabels: 1em
+$labelsColors: #232323
+$fontFamilyLabels: 'open_sanssemibold'
+$marginLabels: 0 0 5px
+
+
+// ========================================================================
+// 11. TABLES
+// ========================================================================
+
+$borderTable: none
+$paddingTable: 10px
+$textAlignTable: center
+
+// ========================================================================
+// 12. MODULOS (Si se utilizan poner true si no false)
+// ========================================================================
+
+$owlCarousel: true
+$cbpSlider: true
+$outtercbpHeight: 100vh //400px 
+$powerCarousel: true
+$classicGallery: false
+$colorBox: true
+
+
+
+
+// ========================================================================
+// 4.5 Variables Mobile MENU
+// ========================================================================
+
+$colorIconMobile: #fff
+$colorIconMobile2: #fff
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+// NO TOCAR SI NO ES UNA TIENDA
+
+// ================================================================================================
+// ================================================================================================
+// 13. VARIABLES TIENDA
+// ================================================================================================
+// ================================================================================================
+
+// ========================================================================
+// 13.0 TerNav (ul li > ul li > ul li) & header subtitle
+// ========================================================================
+
+//TerNav
+//----------------------------
+
+$bgTerNav: #FFF // ul background
+$generalPaddingTerNav: 5px 0 5px 15px // ul padding
+
+
+/* Nav ul li > ul li > ul li */
+
+$colorTerNav: #a7a7a7
+$colorTerNavHover: #c15572
+$colorTerNavCurrent: #c15572
+
+$bgTextTerNav: none
+
+
+$fontFamilyTerNav: 'open_sanssemibold'
+$fontSizeTerNav: 1em
+
+$paddingTerNav: 0
+
+$textTransformTerNav: inherit
+$textAlignTerNav: left
+
+
+//header-subtitle (BreadCrums)
+//----------------------------
+
+$headerSubMargin: 5em 0 2em
+$headerSubPadding: 1.6em 0 1.3em
+
+$headerSubBg: $fontH2Bg
+$headerSubColor: #232323
+$headerSubColorHover: #c15572
+
+$headerSubFontFamily: 'open_sanslight'
+$headerSubFontSize: 1.2em
+$headerSubTextTransform: uppercase
+
+
+// ========================================================================
+// 13.1 Login
+// ========================================================================
+
+$loginWidth: 200px
+
+// Posiciones
+
+$loginTop: 6px
+$loginRight: 0
+$loginBottom: inherit
+$loginLeft: inherit
+
+// login a
+
+$loginColor: #232323
+$loginColorHover: #c15572
+
+$loginFontSize: 1em
+$loginPadding: 0 5px
+
+// ========================================================================
+// 13.2 Cart
+// ========================================================================
+
+$cartWidth: 150px
+
+// Posiciones
+
+$cartTop: 120px
+$cartRight: 0
+$cartBottom: inherit
+$cartLeft: inherit
+
+// Quanity Text
+
+$quantityFontSize: 1.4em
+$quantityColor: #4d4d4d
+$quantityFontFamily: 'open_sanssemibold'
+$quantityPadding: 0 5px
+
+// TextCart Text
+
+$textCartFontSize: 1em
+$textCartColor: #232323
+$textCartFontFamily: 'open_sanssemibold'
+
+// Cart Detail (Desplegable)
+//----------------------------
+
+$cartDetailWidth: 225px
+
+$cartDeatilPadding: 15px
+$cartBorder: solid 1px #ccc // Es solo para cerrar el borde de abajo de todo el detalle del carrito
+
+$cartDeatilBg: url('../images/backgrounds/shoppingBg.png') no-repeat
+$cartDeatilTop: 46px
+
+// Content -> fila (Corresponde a una entrada)
+
+$cartDeatilBorder: solid 1px #ccc // Solo border bottom de la fila
+
+// Total
+
+$TotalDetailColor: #4d4d4d
+$TotalDetailFontFamily: 'open_sanssemibold'
+$TotalDetailFontSize: 1.2em
+
+// Table Cart (Antes de efectuar el pago)
+//---------------------------
+
+$cartTableBorder: solid 1px #ddd // Solo border bottom
+
+// Botones + y -
+
+$cartTablePlusminusWidthHeight: 16px
+
+$cartTablePlusBg: #DDD url('../images/icons/btnstablePlus.png') no-repeat 50% 50%
+$cartTableMinusBg: #DDD url('../images/icons/btnstableMinus.png') no-repeat 50% 50%
+
+$cartTablePlusBgHover: #c15572
+$cartTableMinusBgHover: #c15572
+
+$cartTablePlusminusPadding: 11px 15px
+$cartTablePlusminusTop:-16px
+
+$borderRadiusPlus: 0 2px 2px 0
+$borderRadiusMinus: 2px 0 0 2px
+
+// Total
+	
+$cartTableTotalBg: #F5f5f5
+
+$cartTableTotalColor: #232323
+$cartTableTotalFontSize: 1.5em
+$cartTableTotalFontFamily: 'open_sanssemibold'
+
+
+// ========================================================================
+// 13.3 Search
+// ========================================================================
+
+$searchWidth: 203px
+$searchPadding: 8px 10px 8px 35px
+$searchBg: #FFF url(../images/icons/search.png) no-repeat 10px 50% // Ponemos la img de la lupa de background
+$searchBorder: solid 1px #ececec
+$searchTextTransform: uppercase
+$searchTextColor: #a3a3a3
+ 
+// Posiciones
+
+$searchTop: 100px
+$searchRight: inherit
+$searchBottom: inherit
+$searchLeft: 0
+
+// Boton oculto para buscar tenemos que ponerlo encima del icono (Posicion->Acepta: end, begin)
+
+$endBegin: 'begin'
+
+// AutoComplete
+//---------------------------
+
+$autocompleteBg: #ccc
+$autocompleteBgHover: $colorLinks
+
+$autocompleteColor: #FFF
+$autocompleteColorHover: #FFF
+
+$autocompletePadding: 5px 15px
+
+// ========================================================================
+// 13.4 Listados de productos
+// ========================================================================
+
+$listWidth: 285px
+$listHeight: 560px
+$listMargin: 0 10px
+
+// H3 (Titulo)
+
+$listH3FontSize: 1.4em
+$listH3FontFamily: 'allerregular'
+
+$listH3TextTransform: uppercase
+$listH3TextAlign: left
+
+$listH3Margin: 0 0 .1em
+
+$listH3Color: #4d4d4d
+$listH3ColorHover: #c15572
+
+
+// Description
+
+$listDescriptColor: #4d4d4d
+
+// Precio
+
+$listPriceColor: #c15572
+$listPriceFontFamily: 'open_sanslight'
+$listPriceFontSize: 1.6em
+$listPriceAlign: left
+
+$listPriceBottom: 63px
+
+// Quantity Pack (Cantidad que tiene este pack)
+
+$quantityPackAlign: left
+$quantityPackColor: #c15572
+
+// Button
+
+$listButtonLeft: 0 // Como esta en absoluto, le ponemos el left que queremos
+
+
+// Manufacturers
+//---------------------------
+
+$listManufacturersWidth: 284px
+$listmanufacturersHeight: 284px
+
+$manufacturersH2FontFamily: 'open_sanslight'
+$manufacturersH2FontSize: 1em
+
+$manufacturersH2TextTransform: uppercase
+$manufacturersH2Align: center
+
+
+// ========================================================================
+// 13.5 Información producto (Detalle del producto cuando accedemos a uno)
+// ========================================================================
+
+
+// Imagenes block
+//---------------------------
+
+$productImageContainerWidth: 50%
+
+$productImageThumbsWidth: 33.3%
+
+$productImageContainerPadding: 0 30px 0 0
+
+
+// Product info block
+//---------------------------
+
+$productInfoContainerWidth: 50%
+$productInfoContainerPadding: 20px
+
+$productInfoContainerBg: url('../images/backgrounds/bgProductInfo.jpg') repeat
+
+//H1
+
+$productH1Size: $fontSizeGlobal * 2
+$productH1Family: $secFontFamilyGlobal
+
+$productH1Margin: 0 0 1em
+$productH1Padding: 0 0 .5em
+
+$productH1Align: left
+$textTransformProductH1: uppercase
+
+$productH1Color: #404040
+$productH1Bg:  url('../images/backgrounds/filleth2Ptoduct.jpg') repeat-x 0 100%
+
+// textProduct
+
+$producttextProductColor: $colorGlobal
+$producttextProductMargin: 0 0 1em
+
+// Price
+
+$priceProductH3Size: $fontSizeGlobal * 2.1
+$priceProductH3Family: 'open_sanslight'
+
+$priceProductH3Margin: 0
+$priceProductH3Padding: .6em 0
+
+$priceProductH3Align: left
+$priceTextTransformProductH3: uppercase
+
+$priceProductH3Color: #c15572
+$priceProductH3Bg: url('../images/backgrounds/filleth2Ptoduct.jpg') repeat-x 0 0
+
+// Price Oferta
+
+$priceOfertaSize: .6em
+$priceOfertaFamily: 'open_sanslight'
+$priceOfertaColor: #c15572
+
+// Attributes
+
+$attributesWidth: 10%
+
+$attributesBg: #FFF url('../images/icons/arrow.png') no-repeat 98% 50%
+$attributesBorder: none
+
+$attributesPadding: 5px
+
+
+// ========================================================================
+// 13.5 Checkout
+// ========================================================================
+
+$checkoutBorderBottomTable: solid 1px #DDD
+
+$checkoutBgRadioButtons: #FFF
+$checkoutBgRadioButtonsHover: #f5f5f5
+$checkoutBgRadioButtonsActive: #f5f5f5
+
+

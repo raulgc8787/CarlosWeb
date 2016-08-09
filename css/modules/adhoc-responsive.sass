@@ -1,0 +1,1117 @@
+
+
+//Name: responsive.sass
+//Author: Latevaweb S.L.
+//Version: 1.0.0
+
+//-
+
+//0.T Tabla de contenidos
+//========================
+	
+	// 00. COMUN TABLET MOVIL
+	// ---------------------------------
+
+	// 01. TABLET
+	// ---------------------------------
+		// 1.1 = Grid System
+		// 1.2 = Estrcutura
+
+	// 02. MOBILE
+	// ---------------------------------
+		// 2.1 = Grid System
+		// 2.2 = Estrcutura
+
+
+
+
+///======================================================================================================
+// 00. COMUN TABLET MOVIL
+//=======================================================================================================
+
+
+
+.menuBurgerRight .burgerList #language-nav
+	position: relative
+	width: 100%
+	float: left
+	top: inherit
+	right: inherit
+	bottom: inherit
+	left: inherit
+	z-index: 10	
+	height: 43px
+	//line-height: 24px
+	margin: 0 0 1em
+	padding: 0
+
+	ul
+		margin: 0
+		padding: 0
+		width: 100%
+		float: left
+		text-align: center
+		height: inherit
+		line-height: inherit
+		li
+			float: none
+			display: inline-block
+			margin: 0
+			padding: 0
+			height: 24px
+			line-height: 24px
+			width: 50px
+			a, span
+				display: block
+				text-align: center
+				padding: 10px
+				margin: 0
+				font-size: 1.5em
+				font-family: "open_sanssemibold"
+
+#footMap
+	display: none
+
+.menuBurgerRight #menu1
+	background: rgba(230, 122, 29, 0.91)
+	padding: 55px 0
+	min-height: 100vh
+	overflow: scroll
+.menuBurgerRight li
+	padding-left: 0
+	text-align: center
+	a
+		font-family: 'allerregular'
+		color: #fff
+		font-size: 2em
+
+#content
+	margin-top: 0
+
+.mainHeader
+	height: 75px
+	position: fixed
+	z-index: 999
+	// background: none
+	.logo, .logoCenter
+		position: absolute
+		top: 0
+		right: inherit //variable
+		left: 0 //variable
+		width: 250px //variable
+		height: 70px
+		text-align: left //variable
+		margin: 0
+		padding: 0
+		.logoW
+			display: inherit
+		.logoG
+			display: none
+		img 
+			height: 100%
+			position: relative
+			width: auto
+.header
+	background: #fff
+	-webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+	-moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+	box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+	.logo
+		position: absolute
+		top: 5px
+		right: inherit //variable
+		left: 10px //variable
+		width: 125px //variable
+		height: 40px
+		text-align: left //variable
+		margin: 0
+		padding: 0
+		.logoW
+			display: none
+		.logoG
+			display: inherit
+	.menuBurgerRight
+		#burger1:before
+			color: #e67a1d
+
+.listaNews
+	.header 
+		background: #fff
+		-webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+		-moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+		box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+		height: 50px
+		.logo
+			position: absolute
+			top: 5px
+			right: inherit //variable
+			left: 10px //variable
+			width: 125px //variable
+			height: 40px
+			text-align: left //variable
+			margin: 0
+			padding: 0
+			.logoW
+				display: none
+			.logoG
+				display: inherit
+		.menuBurgerRight
+			#burger1:before
+				color: #e67a1d
+	
+
+
+
+///======================================================================================================
+// 01. TABLET
+//=======================================================================================================
+
+@if $responsivePass == 'tablet'
+	// .srvPage #content .newsList .columnsCSS ul li .imagen
+	// 	display: blok
+	.srvPage #content .block1 .intro .columnsCSS
+		min-height: inherit!important
+		height: auto!important
+		p 
+			display: block
+	#content .container.principios
+		padding: 0 20px
+	.listaNews
+		#content
+			.row
+				.container
+					h1
+						position: relative
+						float: left
+						width: 100%
+					.categorias
+						z-index: 0
+						float: left
+						position: relative
+						padding: 20px
+						margin-bottom: 30px
+						border: none
+						ul
+							background: #fff
+							width: 100%
+							border-radius: 4px
+							text-align: center
+							position: relative
+							border: 1px solid #f2f2f2
+							margin: 0 auto
+							padding: 20px
+							list-style: none
+							li
+								font-family: 'allerregular'
+								display: inline
+								padding-left: 0
+								a
+									color: inherit
+									text-transform: uppercase
+									margin: 0 15px
+								&:before
+									display: none !important
+							.current, a:hover
+								color: inherit
+								text-transform: uppercase
+								margin: 0 15px
+								&:after
+									content: ''
+									width: 100%
+									height: 3px
+									background: #E67A1D
+									position: absolute
+									bottom: 0
+									left: 0
+					.newslist
+						text-align: center
+						.lastNews
+							margin: 0 auto
+							position: relative
+							text-align: center
+							width: 310px
+							img
+								float: left
+							h2
+								margin: 0
+								padding: 0
+								float: left
+								margin-top: 15px
+								margin-left: 10px
+								width: auto
+								text-transform: none
+								font-size: 30px
+								color: #E67A1D
+								padding-bottom: 70px
+								font-family: 'allerregular'
+						ul
+							float: left
+							position: relative
+							width: 100%
+							text-align: left
+							text-align: left
+							padding: 0 40px
+							li
+								background: #F2F2F2
+								display: inline-block
+								padding-left: 0
+								position: relative
+								width: 293px
+								height: 647px
+								margin: 9px
+								&:before
+									display: none
+								&:nth-child(2n+2)
+									.news
+										position: absolute
+										top: inherit
+										left: 0
+										bottom: 0
+									.imagen
+										position: absolute
+										bottom: inherit
+										top: 0
+										left: 0
+										width: 293px
+										height: 293px
+								.news
+									position: absolute
+									top: 0
+									left: 0
+									width: 100%
+									padding: 25px
+									height: 355px
+									.date
+										color: #E67A1D
+										font-size: 12px
+										text-transform: uppercase
+										font-family: 'open_sanssemibold'
+										width: 80%
+										text-align: left
+										padding-bottom: 15px
+										position: absolute
+										top: 20px
+										left: 29px
+									.title
+										position: relative
+										float: left
+										width: 100%
+										display: table
+										.element
+											display: table-cell
+											vertical-align: middle
+											width: 100%
+											margin: 0 auto
+											height: 270px
+											padding-top: 45px
+											overflow: hidden
+											h2
+												margin: 0
+												padding: 0
+									.mas
+										width: 80%
+										border-top: 1px solid #E4E4E4
+										text-align: right
+										padding-top: 15px
+										position: absolute
+										bottom: 20px
+										left: 29px					
+								.imagen
+									position: absolute
+									bottom: 0
+									left: 0
+									width: 293px
+									height: 293px
+
+
+	.popContact, .cbp-bicontrols
+		display: none
+
+	.serveis
+		.columnsCSS
+			-webkit-column-count: 4
+			-moz-column-count: 4
+			column-count: 4
+			column-gap: 1.8em
+			-moz-column-gap: 1.8em
+			-webkit-column-gap: 1.8em
+			padding: inherit
+			position: relative
+			float: left
+
+	
+	#content 
+		.outtercbp 
+			height: 765px
+			.cbp-bislideshow 
+				height: 765px
+				li 
+					.container
+						height: 765px
+						em
+							font-size: 4em
+							bottom: 180px
+							left: 50px
+							width: 62%
+	.home
+		#content
+			.block1
+				.serveis
+					width: 100%
+					.columnsCSS
+						padding-top: 27px
+						.serveisList
+							li
+								img
+									margin-left: -20px
+				h1
+					font-size: 28px
+			.row
+				.container
+					.imagen
+						width: 95%
+						position: relative
+						float: right
+						padding-right: 25px
+					.qSom
+						width: 47%
+						position: absolute
+						top: -115px
+						left: 0
+						background: #fff
+						border-radius: 4px
+						z-index: 10
+						padding: 0px 50px 30px 35px
+			.newsList
+				.lastNews
+					margin: 0 auto
+					position: relative
+				.columnsCSS
+					-webkit-column-count: 3
+					-moz-column-count: 3
+					column-count: 3
+					column-gap: 1.8em
+					-moz-column-gap: 1.8em
+					-webkit-column-gap: 1.8em
+					padding: inherit
+					position: relative
+					float: left
+					width: 100%
+					padding: 0 20px
+					ul
+						li
+							.imagen
+								padding-right: 0 
+							&:nth-child(4)
+								display: none
+				.link
+					width: 70%
+	.mapas .ubicacion 
+		position: absolute
+		top: 30px
+		left: 40px
+		background: #fff
+		border-radius: 4px
+		padding: 40px 75px
+		z-index: 10	
+	
+	.owl-nav
+		display: none
+
+	// .srvPage 
+	// 	#content 
+	// 		.block1 
+	// 			.intro
+	// 				margin-top: 0
+
+
+	
+	
+	.srvPage #content .FAQ .container ul>li ol 
+		padding-left: 20px
+		li
+			list-style-type: number !important
+			padding-left: 0 !important
+			font-size: 14px !important
+	.srvPage #content .FAQ .container ul>li ol li:nth-child(2n+1):before
+		display: none
+		
+	.srvPage #content .FAQ .container ul>li ol li:nth-child(2n+2):before
+		display: none
+
+	.cv
+		.header
+			background: #fff	
+		#content 
+			.block2 
+				.equipo 
+					ul 
+						li 
+							.desc
+								top: -60px
+
+							.portrait 
+								img
+									width: 100% !important
+									margin-top: 80px								
+
+	.srvPage 
+		#content 
+			.block1 
+				.intro 
+					width: 100%
+					.columnsCSS
+						-webkit-column-count: 2
+						-moz-column-count: 2
+						column-count: 2
+						column-gap: 5.2em
+						-moz-column-gap: 5.2em
+						-webkit-column-gap: 5.2em
+						padding: 25px
+
+			.FAQ 
+				.container 
+					ul
+						padding: 47px
+						margin-top: 0
+						float: left
+						position: relative
+						width: 100%
+						li
+							&:nth-child(2n+1)
+								padding: 25px 30px 35px 30px
+								font-size: 20px
+								&:before
+									width: 45px
+									height: 45px
+									background-size: cover
+									border: 6px solid #fff
+									top: -36px
+									left: -30px
+							&:nth-child(2n+2)
+								padding: 25px 30px 35px 30px
+								&:before
+									width: 45px
+									height: 45px
+									background-size: cover
+									border: 6px solid #fff
+									top: -36px
+									right: -30px
+			.newsList 
+				.columnsCSS 
+					-webkit-column-count: 1
+					-moz-column-count: 1
+					column-count: 1
+					column-gap: 0
+					-moz-column-gap: 0
+					-webkit-column-gap: 0
+					ul 
+						li 
+
+							background: #F2F2F2
+							display: inline-block
+							padding: 0 5px
+							margin: 0 10px
+							position: relative
+							width: 293px
+							height: 600px
+							.news 
+								width: 100%
+								.title .element 
+									width: 100%
+									h2
+										text-align: center
+										width: 100%
+
+
+	.empresa 
+		#content 
+
+			.block2 .equipo ul li
+				.desc 
+					top: 140px
+	.srvPage #content .row .container .serveis .item .element h2
+		font-size: 15px
+
+	.empresa #content .block2 .equipo ul li .desc 
+		top: 50px
+		h2, h2 a 
+			font-size: 18px
+		.textintro 
+			font-size: 15px
+
+	.empresa #content .row .serveis
+		width: 100% 
+		padding: 0 20px
+		.columnsCSS
+			column-count: 1
+			ul 
+				padding: 0 10px
+				li .text
+					font-size: 1em
+					line-height: 1.7em
+	.empresa #content .row .container .qSom
+		width: 50%
+
+	#footer-wrapper #footer .container .colum4 
+		text-align: center
+		ul li
+			padding: 0 5px
+	.intro .button
+		margin-left: 20px
+	#content .mapas .mapcontent .ubicacion
+		width: 300px
+		padding: 20px 40px 
+	.mapas .mapcontent #centros li p 
+		font-size: 15px		
+	.subcontainer
+		padding: 0 100px
+
+	// .serveis
+	// 	.columnsCSS
+	// 		-webkit-column-count: 1
+	// 		-moz-column-count: 1
+	// 		column-count: 1
+	// 		column-gap: 1.8em
+	// 		-moz-column-gap: 1.8em
+	// 		-webkit-column-gap: 1.8em
+	// 		padding: inherit
+	// 		position: relative
+	// 		float: left
+	// .home
+	// 	#content
+	// 		.block1
+	// 			.serveis
+	// 				width: 100%
+	// 		.container
+	// 			.qSom
+	// 				width: 100%
+	// 				float: left 
+	// 				position: relative 
+	// 			.imagen
+	// 				width: 100%
+	// 				img
+	// 					width: 100%
+	// 		.newsList
+	// 			.lastNews
+	// 				width: 100%
+	// 				img
+	// 					width: 100%
+	// 				h2
+	// 					width: 100%
+	// 			.columnsCSS
+	// 				-webkit-column-count: 1
+	// 				-moz-column-count: 1
+	// 				column-count: 1
+	// 				column-gap: 1.8em
+	// 				-moz-column-gap: 1.8em
+	// 				-webkit-column-gap: 1.8em
+	// 				padding: inherit
+	// 				position: relative
+	// 				float: left
+	// 				ul
+	// 					li
+	// 						width: 100%
+	// 						&:nth-child(2n+2)
+	// 							.imagen
+	// 								width: 100%
+	// 						.news
+	// 							width: 100%
+	// 							.date
+	// 								width: 100%
+	// 							.title
+	// 								width: 100%
+	// 								.element
+	// 									width: 100%
+	// 							.mas
+	// 								width: 100%
+	// 						.imagen
+	// 							width: 100%
+
+
+///======================================================================================================
+// 02. MOBILE
+//=======================================================================================================
+
+
+@if $responsivePass == "mobile"
+
+
+
+
+	#footer-wrapper #footer .container .colum4 ul li
+		margin: 10px 0
+
+	#footMap
+		display: inherit
+	
+	#footer-wrapper
+		#footer
+			.container
+				.colum4
+					width: 100% !important
+					text-align: center !important
+					.social
+						ul
+							width: 100% !important
+							li
+								padding: 0 29px 0 0 !important
+					li
+						display: inline-block !important
+						padding: 0 !important
+						border-left: none !important
+
+
+	.popContact, .cbp-bicontrols
+		display: none
+
+	.serveis
+		.columnsCSS
+			-webkit-column-count: 1
+			-moz-column-count: 1
+			column-count: 1
+			column-gap: 1.8em
+			-moz-column-gap: 1.8em
+			-webkit-column-gap: 1.8em
+			padding: inherit
+			position: relative
+			float: left
+	
+	#content 
+		.outtercbp 
+			height: 495px
+			.cbp-bislideshow 
+				height: 495px
+				li 
+					.container
+						height: 495px
+						background: rgba(230, 122, 29, 0.38)
+						em
+							font-size: 3em
+							bottom: 20px
+							left: 20px
+							width: 82%
+	.home
+		#content
+			.block1
+				.serveis
+					padding: 25px 5%
+					border-radius: 0
+					width: 100%
+					margin-top: 0
+					.columnsCSS
+						.serveisList
+							li
+								margin-bottom: 4.2em !important
+								.text
+									font-size: 16px
+									line-height: 1.5em
+								h2
+									font-size: 1.8em
+								img
+									margin-left: -20px
+								&:last-child
+									margin-bottom: 0 !important
+					h1
+						font-size: 2em
+			.row
+				.container
+					margin-top: 0
+					padding: 0
+					.qSom
+						width: 100%
+						float: left 
+						position: relative
+						top: 0
+						padding: 25px
+					.imagen
+						width: 150%
+						overflow: hidden
+						img
+							width: 100%
+			.newsList
+				.lastNews
+					margin: 0 auto
+					position: relative
+				.columnsCSS
+					-webkit-column-count: 1
+					-moz-column-count: 1
+					column-count: 1
+					column-gap: 1.8em
+					-moz-column-gap: 1.8em
+					-webkit-column-gap: 1.8em
+					padding: inherit
+					position: relative
+					float: left
+					width: 100%
+					padding: 0 20px
+					ul
+						li
+							width: 100%
+							&:nth-child(2n+2)
+								.imagen
+									width: 100%
+							.news
+								width: 100%
+								bottom: 0
+								top: inherit
+								.date
+									width: 100%
+									left: 0
+									padding-left: 29px
+								.title
+									width: 100%
+									.element
+										width: 100%
+								.mas
+									width: 90%
+									left: 12px
+							.imagen
+								width: 100%
+								top: 0
+								bottom: inherit
+				.link
+					width: 70%
+	.mapas .ubicacion 
+		width: 100%
+		// height: 864px
+		position: relative
+		top: 0
+		left: 0
+		background: #fff
+		border-radius: 4px
+		padding: 40px
+		z-index: 10	
+	.map
+		height: 500px
+	
+	.owl-nav
+		display: none
+
+
+
+	.empresa 
+		#content 
+			padding-bottom: 20px
+			.row 
+				.container
+					margin-top: 20px
+					.imagen
+						width: 100%		
+					.qSom 
+						width: 100%
+						position: relative
+						top: inherit
+						right: inherit
+						background: #fff
+						border-radius: 4px
+						z-index: 10
+						padding: 20px 0				
+				.principios .columnsCSS
+					-webkit-column-count: 1
+					-moz-column-count: 1
+					column-count: 1
+					column-gap: 0
+					-moz-column-gap: 0
+					-webkit-column-gap: 0
+					padding: inherit
+					position: relative
+					float: left
+				.serveis 
+					width: 100%
+					padding: 0 10px
+					ul 
+						padding: 0 10px
+			.block2 .equipo ul li
+				padding: 0px 20px!important
+				width: 100% !important
+				.desc 
+					position: absolute
+					left: 20px
+					top: 45px
+					h2 a
+						font-size: 18px 
+						font-size: 14px 
+					.textintro 
+						font-size: 14px 
+
+	.cv
+		.header
+			background: #fff	
+		#content 
+			.block2 
+				.equipo 
+					ul 
+						li 
+							.desc
+								top: -60px
+							.portrait 
+								img
+									width: 100% !important
+									margin-top: 80px								
+
+
+	.srvPage 
+		#content 
+			.row .container .serveis .item
+				width: 100% !important
+			.block1 
+				.intro 
+					width: 100%
+					margin-top: 0
+					.columnsCSS
+						-webkit-column-count: 1
+						-moz-column-count: 1
+						column-count: 1
+						column-gap: 5.2em
+						-moz-column-gap: 5.2em
+						-webkit-column-gap: 5.2em
+						padding: 25px
+			.FAQ 
+				.container 
+					ul
+						padding: 47px 20px
+						margin-top: 0
+						float: left
+						position: relative
+						width: 100%
+
+						>li ol 
+							padding-left: 20px
+							margin: 10px 0
+							li
+								list-style-type: number !important
+								padding-left: 0 !important
+								font-size: 14px !important
+								padding: 10px!important
+								margin: 0px!important
+
+								&:nth-child(2n+1):before, &:nth-child(2n+2):before
+									display: none
+
+
+						li
+							&:nth-child(2n+1)
+								padding: 25px 30px 35px 20px
+								font-size: 20px
+								&:before
+									width: 45px
+									height: 45px
+									background-size: cover
+									border: 6px solid #fff
+									top: -36px
+									left: -30px
+							&:nth-child(2n+2)
+								padding: 25px 30px 35px 20px
+								&:before
+									width: 45px
+									height: 45px
+									background-size: cover
+									border: 6px solid #fff
+									top: -36px
+									right: -30px
+			.newsList 
+				.lastNews 
+					h2
+						margin: 0
+						padding: 0
+						float: left
+						margin-top: 15px
+						margin-left: 10px
+						width: auto
+						text-transform: none
+						font-size: 30px
+						color: #E67A1D
+						padding-bottom: 70px
+						font-family: "allerregular"
+						clear: left
+
+				.columnsCSS 
+					-webkit-column-count: 1
+					-moz-column-count: 1
+					column-count: 1
+					column-gap: 1.8em
+					-moz-column-gap: 1.8em
+					-webkit-column-gap: 1.8em
+					ul 
+						width: 100%
+						li 
+							margin: 1em 0 0
+							// width: 100%
+							min-height: 293px
+							.imagen2
+								display: block
+							.imagen
+								position: relative
+								bottom: inherit
+								left: inherit
+								width: 100%
+								height: inherit
+							.news
+								position: relative
+								top: inherit
+								right: inherit
+								width: 100%
+								padding: 25px
+								height: inherit	
+								.title .element h2 
+									text-align: center
+
+											
+	.contacto 
+		#content 
+			.row 
+				.map
+					height: 400px
+				
+			.mapas
+				.mapcontent
+					.ubicacion
+						top: 0	
+						position: relative
+						float: left
+						margin-top: 100px
+
+	.listaNews
+		.btnMb
+			z-index: 5
+		.mainHeader 
+			background: #fff
+			-webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+			-moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+			box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.3)
+			height: 50px
+			.logo
+				position: absolute
+				top: 5px
+				right: inherit //variable
+				left: 10px //variable
+				width: 125px //variable
+				height: 40px
+				text-align: left //variable
+				margin: 0
+				padding: 0
+				.logoW
+					display: none
+				.logoG
+					display: inherit
+			.menuBurgerRight
+				#burger1:before
+					color: #e67a1d
+		#content
+			.row
+				.container
+					h1
+						margin-top: 100px
+					.overflow
+						overflow: hidden
+						position: fixed
+						top: 36px
+						padding: 0
+						margin-left: -1em
+						width: 100%
+						height: 42px
+						padding-top: 10px
+						z-index: 5
+						.categorias
+							background: #adadad
+							width: 100%
+							overflow-x: scroll
+							overflow-y: hidden
+							-webkit-overflow-scrolling: touch
+							padding: 7px 0
+							border-radius: 0
+							ul
+								width: 100%
+								white-space: nowrap
+								li
+									position: relative
+									display: inline-block
+									a
+										color: #fff
+										&:after
+											background: #fff
+									a:hover
+										&:after
+											display: none
+									&:after
+										background: #fff
+									&:first-child
+										margin-left: 100px
+									&:last-child
+										margin-right: 100px
+								.current
+									color: #fff
+					.newslist 
+						ul 
+							li
+								z-index: 0
+
+	.listaNews
+		#content
+			.row
+				.container
+					.categorias
+						ul
+							.current, a:hover
+								color: inherit
+								text-transform: uppercase
+								margin: 0 15px
+								&:after
+									content: ''
+									width: 100%
+									height: 3px
+									background: #fff
+									position: absolute
+									bottom: 0
+									left: 0
+									border-radius: 0
+
+
+	// 2.1 = Grid System 
+	//---------------------------------------------------------------
+	
+
+	// 2.2 = Estrcutura
+	//---------------------------------------------------------------
+	
+
+	// 2.3 = inputs & buttons
+	//---------------------------------------------------------------
+
+
+	// 2.4 = cart
+	//---------------------------------------------------------------
+	
+
+	// 2.4 = product-listing
+	//---------------------------------------------------------------
+
+
+	// 2.5 = homeowl, cbp
+	//---------------------------------------------------------------
+
+
+	// 2.6 = Product info
+	//---------------------------------------------------------------
+
+
+	// 2.7 = Search
+	//---------------------------------------------------------------
+
+	
+	// 2.8 = Social
+	//---------------------------------------------------------------
+
+	
+	// 2.9 = language
+	//---------------------------------------------------------------
+		
+
+	// 2.10 = Shopping-cart
+	//---------------------------------------------------------------
+		
+
+	// 2.11 = orders-list
+	//---------------------------------------------------------------
+

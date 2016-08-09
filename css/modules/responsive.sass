@@ -1,0 +1,868 @@
+
+
+//Name: responsive.sass
+//Author: Latevaweb S.L.
+//Version: 1.0.0
+
+//-
+
+//0.T Tabla de contenidos
+//========================
+	
+	// 00. COMUN TABLET MOVIL
+	// ---------------------------------
+		// 0.1 MENUS MOBILE
+
+	// 01. TABLET
+	// ---------------------------------
+		// 1.1 = Grid System
+		// 1.2 = Estrcutura
+
+	// 02. MOBILE
+	// ---------------------------------
+		// 2.1 = Grid System
+		// 2.2 = Estrcutura
+
+
+
+
+///======================================================================================================
+// 00. COMUN TABLET MOVIL
+//=======================================================================================================
+
+.icon-menu
+	display: block
+	height: 34px
+	width: 34px
+	left: 6px
+	position: absolute
+	top: 1px
+	z-index: 1000
+	font-family: 'iconsltw2'
+	font-size: 32px
+	line-height: 34px
+	cursor: pointer
+	text-align: center
+
+	&:before
+		content: '\e852' 
+		color: $colorLinks
+	&:hover:before
+		content: '\e852' 
+		color: $colorLinksHover
+
+
+#mp-menu
+	background: #fff none repeat scroll 0 0
+	left: 0
+	position: fixed
+	top: 0
+	transform: translateX(-100%)
+	-webkit-transform: translateX(-100%)
+	-moz-transform: translateX(-100%)
+	width: 83%
+	z-index: 1000000
+	padding: 20px
+	height: 100%
+	overflow: auto 
+
+
+	ul li a, ul li span
+		float: left
+		font-size: 1.3em
+		padding: 0.2em 0
+		width: 100%
+		color: #c15572
+
+
+	ul li ul
+		background: #f5f5f5
+		padding: 1em
+		position: relative
+		float: left
+		width: 100%
+		a,span
+			color: #aaa
+			font-size: 18px
+
+		ul
+			background: #f5f5f5
+			padding: 0 1em
+
+			a,span
+				color: #c15572
+				font-size: 18px
+
+
+.bkgblack
+	background: rgba(0,0,0,.2)
+	height: 100%
+	width: 100%
+	position: fixed
+	z-index: 100000000
+	visibility: hidden
+	opacity: 0
+
+.overYHideen
+	overflow: hidden !important
+
+.menuShow
+	animation-name: moveMenu
+	animation-duration: .3s
+	animation-fill-mode: forwards
+	-webkit-animation-name: moveMenu
+	-webkit-animation-duration: .3s
+	-webkit-animation-fill-mode: forwards
+
+.moveall
+	animation-name: moveall
+	animation-duration: .3s
+	animation-fill-mode: forwards
+	-webkit-animation-name: moveall
+	-webkit-animation-duration: .3s
+	-webkit-animation-fill-mode: forwards
+	overflow-y: hidden
+.showBg
+	animation-name: showBg
+	animation-duration: .3s
+	animation-fill-mode: forwards
+	-webkit-animation-name: showBg
+	-webkit-animation-duration: .3s
+	-webkit-animation-fill-mode: forwards
+
+@keyframes moveMenu
+	0%
+		transform: translateX(-100%)
+	100%
+		transform: translateX(0)
+
+@keyframes moveall
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(83%)
+
+@keyframes showBg
+	0%
+		opacity: 0
+		visibility: hidden
+	100%
+		opacity: 1
+		visibility: visible
+
+// Para webkit
+
+@-webkit-keyframes moveMenu
+	0%
+		-webkit-transform: translateX(-100%)
+	100%
+		-webkit-transform: translateX(0)
+
+@-webkit-keyframes moveall
+	0%
+		-webkit-transform: translateX(0)
+	100%
+		-webkit-transform: translateX(83%)
+
+@-webkit-keyframes showBg
+	0%
+		opacity: 0
+		visibility: hidden
+	100%
+		opacity: 1
+		visibility: visible 
+
+//=======================================================================================================
+// 0.1 MENUS MOBILE
+//======================================================================================================= 
+
+.header
+	height: 50px
+	position: fixed
+	z-index: 999
+.logo, .logoCenter
+	position: absolute
+	top: 5px
+	right: inherit //variable
+	left: 10px //variable
+	width: 125px //variable
+	height: 40px
+	text-align: left //variable
+	margin: 0
+	padding: 0
+	img 
+		height: 100%
+		position: relative
+		width: auto
+.logoCenter
+	left: 50%
+	margin-left: -62px //variable -$widthLogo/2
+
+// Burger Right
+//----------------------------------------------------
+.menuBurgerRight
+	right: 0
+	position: absolute
+	z-index: 9999
+	@keyframes checked-anim
+		50%
+			width: 100%
+			height: 100%
+		
+		100%
+			width: 100%
+			height: 100%
+			border-radius: 0
+
+	@keyframes not-checked-anim
+		0%
+			width: 3000px
+			height: 3000px
+
+	// Para webkit
+
+	@-webkit-keyframes checked-anim
+		50%
+			width: 100%
+			height: 100%
+		100%
+			width: 100%
+			height: 100%
+			border-radius: 0
+
+	@-webkit-keyframes not-checked-anim
+		0%
+			width: 3000px
+			height: 3000px
+
+	a
+		margin: 20px 0 15px 0 // Variable
+		color: #000 // Variable
+		font-size: 14px // Variable
+		line-height: 1.1em // Variable
+		outline: 0
+
+	li
+		display: none
+		float: left
+		line-height: 1.1em
+		padding: 0 0 0 20px
+		text-align: left
+		width: 100%
+
+	a:focus
+		display: block
+
+	#trigger1, #burger1
+		position: absolute
+		top: 14px
+		right: 10px
+		width: 24px
+		height: 24px
+		margin: 0
+		transition: .2s ease
+		-webkit-transition: .2s ease
+		cursor: pointer
+		z-index: 999
+
+	#burger1:before
+		content: "\e81f" //TIPOGRAFIA MENU
+		top: 0
+		left: 0
+		bottom: inherit
+		right: inherit
+		width: 24px
+		height: 24px
+		position: absolute
+		color: $colorIconMobile //crear constante
+		font-family: "iconsltw2"
+		font-size: 22px
+		text-align: center
+
+	#menu-toggle1:checked + #trigger1 + #burger1:before
+		background: none
+		content: "\e83d" //TIPOGRAFIA CERRAR
+		top: 0
+		left: 0
+		bottom: inherit
+		right: inherit
+		width: 24px
+		height: 24px
+		position: absolute
+		color: $colorIconMobile2 //crear constante
+		font-family: "iconsltw2"
+		font-size: 22px
+		text-align: center
+
+	#menu1
+		position: absolute
+		margin: 0
+		right: 0
+		padding: 35px 0 0
+		width: 0
+		height: 0
+		background-color: RGBA(255, 255, 255, 0.95)
+		border-bottom-left-radius: 100%
+		animation: not-checked-anim .2s both
+		-webkit-animation: not-checked-anim .2s both
+		transition: .2s
+		-webkit-transition: .2s
+		z-index: 99
+		position: fixed
+
+	#menu-toggle1:checked + #trigger1 + #burger1 + #menu1
+		animation: checked-anim 1s ease both
+		-webkit-animation: checked-anim 1s ease both
+
+	#menu-toggle1:checked + #trigger1 ~ #menu1 > li, a
+		display: block
+
+	[type="checkbox"]:not(:checked), [type="checkbox"]:checked
+		display: none
+
+	.iconCartHeader
+		margin: 7px 10px 0 0
+
+// Burger Center
+//----------------------------------------------------
+.menuBurgerCenter
+	right: 35px
+	position: absolute
+	z-index: 9999
+	@keyframes checked-anim
+		50%
+			width: 100%
+			height: 100%
+		
+		100%
+			width: 100%
+			height: 100%
+			border-radius: 0
+
+	@keyframes not-checked-anim
+		0%
+			width: 3000px
+			height: 3000px
+
+	// Para webkit
+
+	@-webkit-keyframes checked-anim
+		50%
+			width: 100%
+			height: 100%
+		100%
+			width: 100%
+			height: 100%
+			border-radius: 0
+
+	@-webkit-keyframes not-checked-anim
+		0%
+			width: 3000px
+			height: 3000px
+
+	a
+		margin: 20px 0 15px 0 // Variable
+		color: #000 // Variable
+		font-size: 14px // Variable
+		line-height: 1.1em // Variable
+		outline: 0
+
+	li
+		display: none
+		float: left
+		line-height: 1.1em
+		padding: 0 0 0 20px
+		text-align: left
+		width: 100%
+
+	a:focus
+		display: block
+
+	#trigger3, #burger3
+		position: absolute
+		top: 14px
+		right: 10px
+		width: 24px
+		height: 24px
+		margin: 0
+		transition: .2s ease
+		-webkit-transition: .2s ease
+		cursor: pointer
+		z-index: 999
+
+	#burger3:before
+		content: "\e82e" //TIPOGRAFIA SEARCH
+		top: 0
+		left: 0
+		bottom: inherit
+		right: inherit
+		width: 24px
+		height: 24px
+		position: absolute
+		color: & colorIconMobile //crear constante
+		font-family: "iconsltw2"
+		font-size: 22px
+		text-align: center
+
+	#menu-toggle3:checked + #trigger3 + #burger3:before
+		background: none
+		content: "\e83d" //TIPOGRAFIA CERRAR
+		top: 0
+		left: 0
+		bottom: inherit
+		right: inherit
+		width: 24px
+		height: 24px
+		position: absolute
+		color: &colorIconMobile //crear constante
+		font-family: "iconsltw2"
+		font-size: 22px
+		text-align: center
+
+	#menu3
+		position: absolute
+		margin: 0
+		right: 0
+		padding: 35px 0 0
+		width: 0
+		height: 0
+		background-color: RGBA(255, 255, 255, 0.95)
+		border-bottom-left-radius: 100%
+		animation: not-checked-anim .2s both
+		-webkit-animation: not-checked-anim .2s both
+		transition: .2s
+		-webkit-transition: .2s
+		z-index: 99
+		position: fixed
+
+	#menu-toggle3:checked + #trigger3 + #burger3 + #menu3
+		animation: checked-anim 1s ease both
+		-webkit-animation: checked-anim 1s ease both
+
+	#menu-toggle3:checked + #trigger3 ~ #menu3 > li, a
+		display: block
+
+	[type="checkbox"]:not(:checked), [type="checkbox"]:checked
+		display: none
+
+	.iconCartHeader
+		margin: 7px 10px 0 0
+.iconBack
+	z-index: 1000
+
+// Burger Left
+//----------------------------------------------------
+.menuBurgerLeft
+	left: 0 
+	position: absolute
+	z-index: 9999
+	@keyframes checked-anim
+		50%
+			width: 100%
+			height: 100%
+		
+		100%
+			width: 100%
+			height: 100%
+			border-radius: 0
+
+	@keyframes not-checked-anim
+		0%
+			width: 3000px
+			height: 3000px
+
+	// Para webkit
+
+	@-webkit-keyframes checked-anim
+		50%
+			width: 100%
+			height: 100%
+		100%
+			width: 100%
+			height: 100%
+			border-radius: 0
+
+	@-webkit-keyframes not-checked-anim
+		0%
+			width: 3000px
+			height: 3000px
+
+	a
+		margin: 20px 0 15px 0 // Variable
+		color: #000 // Variable
+		font-size: 14px // Variable
+		line-height: 1.1em // Variable
+		outline: 0
+
+	li
+		display: none
+		float: left
+		line-height: 1.1em
+		padding: 0 0 0 20px
+		text-align: left
+		width: 100%
+
+	a:focus
+		display: block
+
+	#trigger2, #burger2
+		position: absolute
+		top: 14px
+		left: 10px
+		width: 24px
+		height: 24px
+		margin: 0
+		transition: .2s ease
+		-webkit-transition: .2s ease
+		cursor: pointer
+		z-index: 999
+
+	#burger2:before
+		content: "" //TIPOGRAFIA - SVG USER
+		top: 0
+		left: 0
+		bottom: inherit
+		right: inherit
+		width: 24px
+		height: 24px
+		position: absolute
+		color: & colorIconMobile //crear constante
+		font-family: "iconsltw2"
+		font-size: 22px
+		text-align: center
+		z-index: 9
+
+	#menu-toggle2:checked + #trigger2 + #burger2:before
+		background: none
+		content: "\e83d" //TIPOGRAFIA CERRAR
+		top: 0
+		left: 0
+		bottom: inherit
+		right: inherit
+		width: 24px
+		height: 24px
+		position: absolute
+		color: &colorIconMobile //crear constante
+		font-family: "iconsltw2"
+		font-size: 22px
+		text-align: center
+		z-index: 999
+
+	#menu2
+		position: absolute
+		margin: 0
+		left: 0
+		padding: 35px 0 0
+		width: 0
+		height: 0
+		background-color: RGBA(255, 255, 255, 0.95)
+		border-bottom-right-radius: 100%
+		animation: not-checked-anim .2s both
+		-webkit-animation: not-checked-anim .2s both
+		transition: .2s
+		-webkit-transition: .2s
+		z-index: 99
+		position: fixed
+
+	#menu-toggle2:checked + #trigger2 + #burger2 + #menu2
+		animation: checked-anim 1s ease both
+		-webkit-animation: checked-anim 1s ease both
+
+	#menu-toggle2:checked + #trigger2 ~ #menu2 > li, a
+		display: block
+
+	[type="checkbox"]:not(:checked), [type="checkbox"]:checked
+		display: none
+#burger1, #burger2, #burger3
+	&.burgerMenu:before 
+		content: "\e81f" //TIPOGRAFIA MENU
+	&.burgerSearch:before
+		content: "\e82e" //TIPOGRAFIA SEARCH
+	&.burgerUser:before
+		content: "" //TIPOGRAFIA MENU
+		background: url('../images/icons/user.svg') no-repeat
+
+
+// Formulario Burger Search
+//----------------------------------------------------
+.boxSearch
+	margin: 0 auto
+	padding: 15px
+	width: 100%
+	.formSearch
+		display: inline-block
+		li
+			display: inline-block
+			padding: 0
+
+// Formulario Aux Search
+//----------------------------------------------------
+.auxSearch
+	top: 50px
+	position: relative
+	width: 100%
+	.searchForm
+		background: #bbb
+		float: left
+		padding: 5px
+		width: 100%
+
+
+
+///======================================================================================================
+// 01. TABLET
+//=======================================================================================================
+
+@if $responsivePass == 'tablet'
+   
+	// 1.1 = Grid System 
+	//---------------------------------------------------------------
+	
+	@for $i from 1 through $numCols
+		.col#{$i}
+			width: ((100%/$numCols))*$i
+			padding: 0 $medianil/2+px
+			float: left
+
+	// 1.2 = Estrcutura
+	//---------------------------------------------------------------
+	
+	.container, .subcontainer
+		width: 100%
+		margin: 0 auto
+		position: relative
+
+
+///======================================================================================================
+// 02. MOBILE
+//=======================================================================================================
+
+
+@if $responsivePass == "mobile"
+
+	// 2.1 = Grid System 
+	//---------------------------------------------------------------
+	
+	@for $i from 1 through $numCols
+		.col#{$i}
+			width: 100%
+			padding: 0
+			float: left
+
+	// 2.2 = Estrcutura
+	//---------------------------------------------------------------
+	
+	.container, .subcontainer
+		width: 100%
+		margin: 0 auto
+		padding: 0 1em
+		position: relative
+
+	.half
+		width: 100%
+
+	footer
+		div
+			margin-bottom: 1em
+
+	.first, .last
+		margin-left: 0 !important
+		margin-right: 0 !important
+
+	.header-subtitle
+		padding: 1.6em 1em 1.3em
+
+	// .logo
+	// 	position: relative
+	// 	top: inherit
+	// 	left: inherit
+	// 	width: 100%
+	// 	text-align: center
+	// 	margin: 90px 0 0 0
+	// 	padding: 0
+	// 	img 
+	// 		position: relative
+
+
+	#wrapper
+		padding: 0
+	#content
+		margin-top: 55px //variable
+	.billinAdressCont
+		width: 100%
+		position: relative
+		float: left
+
+	.empresa #content .companyservices
+		padding: 25px
+		.row
+			margin: 0 0 25px
+			border-top: 1px solid #DDD
+			padding: 25px 0
+
+		h2
+			color: #E67A1D
+			text-transform: none
+			text-align: left
+			margin: 0 0 1em
+			padding: 0
+			font-size: 20px
+		img 
+			max-width: 100%
+			margin: 0 0 1em		
+
+	// 2.3 = inputs & buttons
+	//---------------------------------------------------------------
+
+	input, textarea, select, form ul li, .button
+		width: 100%
+
+	form li
+		padding: 0
+
+
+	// 2.4 = cart
+	//---------------------------------------------------------------
+	
+	.ajax_cart_button
+		position: fixed
+		bottom: 0
+		right: 0
+		width: 55px
+		height: 55px
+		z-index: 100
+		top: inherit !important
+		background: #FFF
+		.iconcart
+			margin: 12px 0 0 11px
+		.cart-detail
+			display: none !important
+		.text
+			display: none !important
+		.content_quantity
+			float: left
+			position: absolute
+			right: 3px
+			top: 5px
+			border-radius: 50%
+			width: 25px
+			height: 25px
+			background: #c15572
+			text-align: center
+			.quantity
+				color: #FFF
+				font-size: 1.1em
+
+	// 2.4 = product-listing
+	//---------------------------------------------------------------
+
+	.product-listing
+		ul li
+			width: 250px
+			height: auto
+			.img-container
+				width: 100%	!important
+				img
+					width: 100%	!important
+
+			.price-container
+				float: left
+				bottom: inherit
+				position: relative
+				margin-bottom: 15px
+
+			.button
+				position: relative
+				float: left
+				bottom: inherit
+
+	// 2.5 = homeowl, cbp
+	//---------------------------------------------------------------
+
+	/* .homeowl, .cbp-bislideshow, .cbp-bicontrols, .outtercbp
+		display: none !important */
+
+	// 2.6 = Product info
+	//---------------------------------------------------------------
+
+	.containerImage, .infoProduct
+		width: 100%
+		padding: 0 15px
+		.description 
+			.attributes table td
+				width: 100%
+		.infoProductId, .product-social
+			width: 100% !important
+
+	// 2.7 = Search
+	//---------------------------------------------------------------
+
+	.search
+		width: 100%
+		top: 36px
+	
+	// 2.8 = Social
+	//---------------------------------------------------------------
+
+	.social
+		top: 0
+		right: inherit
+		left: 0
+		position: relative
+		ul
+			float: left
+
+	
+	// 2.9 = language
+	//---------------------------------------------------------------
+		
+	#language-nav
+		position: relative
+		float: left
+		width: 100% !important
+		padding-left: 40px
+
+		li
+			color: #FFF !important	
+			width: 25px
+
+	// 2.10 = Shopping-cart
+	//---------------------------------------------------------------
+	#shopping-cart
+		.button
+
+			&.default
+				margin-bottom: 1em
+
+		table
+			width: 100%
+			tr
+				width: 100%
+				float: left
+				position: relative
+				margin-bottom: 1em
+				&:first-child
+					display: none
+				&:last-child
+					text-align: center !important
+					font-size: 	1.3em
+				td
+					width: 100%
+					float: left
+					position: relative
+		
+	// 2.11 = orders-list
+	//---------------------------------------------------------------
+	
+	.orders-list li span
+		width: 100%
+		
+
+	// 2.12 = Mapa
+	//---------------------------------------------------------------
+
+	.mapcontent
+		.button
+			width: 150px
+
+

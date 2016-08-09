@@ -1,0 +1,1687 @@
+
+
+//Name: adhoc.sass
+//Author: Latevaweb S.L.
+//Version: 1.0.0
+
+//-
+
+
+
+//0.T Tabla de contenidos
+//========================
+	
+	// 00. Commons
+	// ---------------------------------
+
+	// 01. Listado de productos
+	// ---------------------------------
+
+	// 03. Información del producto
+	// ---------------------------------
+		
+//-
+
+
+
+///======================================================================================================
+//00. Commons
+//=======================================================================================================
+.ok
+	#content
+		.row
+			text-align: center
+
+
+.cookies
+	#content
+		ul
+			float: left
+			width: 100%
+
+#language-nav
+	font-size: 12px
+	width: auto
+	margin-right: 20px
+	ul
+		li
+			a
+				color: #fff
+			span
+				font-family: 'open_sanssemibold'
+				color: #fff
+
+.link
+	font-family: 'open_sanssemibold'
+	font-size: 12px
+	text-transform: uppercase
+	border: 1px solid #E67A1D
+	border-radius: 20px
+	width: 240px
+	position: relative
+	margin-top: 50px
+	& a, a:hover
+		background: inherit
+		color: inherit
+
+.mas
+	color: #E67A1D
+	font-size: 12px
+	text-transform: uppercase
+	font-family: 'open_sanssemibold'
+	position: relative
+	float: right
+	a, a:hover
+		color: inherit
+
+.mapas
+	position: relative
+	.mapcontent
+		#centros
+			li
+				.title
+					font-family: 'allerregular'
+					color: #E67A1D
+					font-size: 27px
+					float: left
+					width: 100%
+					margin: 60px 0 20px 0
+				p
+					font-size: 17px
+				.link
+					font-size: 10px
+					width: 224px
+					margin-top: 25px
+					border-radius: 14px
+				.button
+					padding: 8px 0
+				&:nth-child(2)
+					.title
+						font-family: 'allerregular'
+						color: #E67A1D
+						font-size: 20px
+						float: left
+						width: 100%
+						margin: 30px 0 10px 0
+					p
+						font-size: 13px
+	.ubicacion
+		width: 374px
+		height: 714px
+		position: absolute
+		top: 45px
+		left: 90px
+		background: #fff
+		border-radius: 4px
+		padding: 40px 75px
+		.row
+			img
+				float: left
+				position: relative
+				margin-left: -25px
+			h2
+				margin: 0
+				padding: 0
+				width: auto
+				float: left
+				position: relative
+				text-transform: none
+				font-family: 'allerregular'
+				font-size: 36px
+				margin-left: 10px
+				margin-top: 20px
+				color: #E67A1D
+	
+#footer-wrapper
+	#footer
+		padding: 40px 0px 75px
+		.container
+			.colum4
+				width: 33.3%
+				position: relative
+				float: left
+				color: #fff
+				.social
+					position: relative
+					top: 0
+					margin: 0 auto
+					left: inherit
+					right: inherit
+					ul 
+						text-align: center
+						li 
+							border-left: none
+							a, a:hover
+								color: #fff
+				ul 
+					text-align: center
+					li 
+						display: inline
+						padding: 0 15px
+						border-left: 1px solid #fff
+						&:first-child
+							border-left: none
+						a, a:hover
+							color: #fff
+
+//0.1 Header
+//------------------------------------------------------------- 
+
+header
+	background: rgba(214,118,0,0.63)
+	background: -moz-linear-gradient(top, rgba(185, 119, 38, 0.64) 0%, rgba(255,255,255,0) 100%)
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(185, 119, 38, 0.64)), color-stop(100%, rgba(255,255,255,0)))
+	background: -webkit-linear-gradient(top, rgba(185, 119, 38, 0.64) 0%, rgba(255,255,255,0) 100%)
+	background: -o-linear-gradient(top, rgba(185, 119, 38, 0.64) 0%, rgba(255,255,255,0) 100%)
+	background: -ms-linear-gradient(top, rgba(185, 119, 38, 0.64) 0%, rgba(255,255,255,0) 100%)
+	position: absolute
+	z-index: 30
+	.logo
+		position: relative
+		float: left
+		left: 0
+		top: inherit
+		margin-left: 0
+		margin-top: 15px
+		z-index: 1111
+		width: $widthLogo
+		img
+			width: 100%
+		
+	#language-nav 
+		position: absolute
+		right: 0
+		left: inherit
+	.social
+		display: none
+	nav
+		background: none
+		position: relative
+		float: right
+		width: $widthNav
+		margin-top: 45px
+		border-top: 0px
+		font-size: 14px
+		ul
+			text-align: right
+			li
+				a, a:hover, li.current
+					color: #fff
+					font-size: 14px
+				a:hover, &.current
+					&:after
+						content: "\e832"
+						font-family: 'iconsltw2'
+						width: 100%
+						position: absolute
+						left: 0
+						color: #E67A1D
+						bottom: -20px
+						text-align: center
+						font-size: 7px
+				ul
+					display: none
+
+//0.2 Owl Carousel
+//------------------------------------------------------------- 
+
+.owl-carousel
+	.owl-item
+		padding: 0
+		// background: #f2f2f2
+		padding: 25px
+		display: table
+		border: 1px solid #d6d6d6
+		border-radius: 4px
+		.element
+			display: table-cell
+			vertical-align: middle
+			width: 100%
+			margin: 0 auto
+			height: 190px
+			overflow: hidden
+			width: 360px
+			h2
+				text-align: center
+	img
+		width: 100%
+		height: auto
+	.claim-container
+
+		left: 50%
+		top: 50%
+		margin-left: -200px
+		margin-top: -100px
+		position: absolute
+		width: 400px
+		height: 200px
+
+		h2
+			color: #FFF
+			background: none
+			text-align: center
+			font-size: 3.1em
+.owl-nav
+	position: absolute
+	width: 110%
+	margin-top: -160px
+	z-index: 30
+	margin-left: -58px
+	.owl-prev
+		background: url('/images/icons/btn-prev.png') !important
+		width: 35px
+		height: 56px
+		position: absolute
+		left: 0
+		top: 0
+	.owl-next
+		background: url('/images/icons/btn-next.png') !important
+		width: 35px
+		height: 56px
+		position: absolute
+		right: 0
+		top: 0
+.owl
+	padding: 50px 0
+
+//0.3 Dynamic list
+//------------------------------------------------------------- 
+
+.dynamic-list
+	h2
+		font-family: 'robotoBold'
+		background: none
+		float: left
+		padding: 0
+		margin: 0 0 1em
+		text-align: left
+		text-transform: inherit
+		&:hover
+			color: #c15572 !important	
+	.date
+		margin-bottom: .1em !important
+
+///======================================================================================================
+//01. Index
+//=======================================================================================================
+
+
+// 1.1 productHome
+//-------------------------------------------------------------
+
+.productHome
+	margin-bottom: 4em
+
+
+// 1.2 newsHome
+//-------------------------------------------------------------
+
+#newsHome
+	background: url(../images/backgrounds/bgEmpresaHome.jpg) repeat
+	.containerInfo
+		width: 450px
+		padding: 4em 0 6em 0
+		float: right
+		margin-right: 100px
+		color: #FFF
+
+		h2
+			background: url(../images/backgrounds/filletRed.jpg) repeat-x 0 100%
+			padding-bottom: 12px
+			text-align: left
+			color: #FFF
+			margin: 0
+			margin-bottom: 1em
+
+///======================================================================================================
+//02. Listado de productos
+//=======================================================================================================
+
+.product-listing
+	.img-container
+		img
+			position: absolute
+			left: -19px
+			width: 304px
+	.button
+		left: 0
+		width: 100%
+		
+///======================================================================================================
+//03. Información del producto
+//=======================================================================================================
+
+.btn-comprar
+	float: left
+	margin-top: 10px
+	position: relative
+	width: 100%
+
+.dateNews
+	float: left
+	font-family: "robotoLight"
+	font-size: 21px
+	margin-bottom: 26px
+	padding: 25px
+	text-align: center
+	width: 100%
+
+///======================================================================================================
+//04. Listado de manufacturas
+//=======================================================================================================
+
+.manufacturers-listing
+	h2
+		display: none !important
+
+///======================================================================================================
+//05. Contact us
+//=======================================================================================================
+
+
+
+
+///======================================================================================================
+//05. CBP
+//=======================================================================================================
+#content
+	.outtercbp
+		.cbp-bislideshow
+			li
+				.container
+					height: 100vh
+					margin-top: 0
+					em
+						position: absolute
+						bottom: 240px
+						top: inherit
+						left: 0
+						//margin: 0
+						margin-left: inherit
+						//padding: 0
+						width: 45%
+						font-size: 5.7em
+						line-height: 1em
+						font-family: 'allerregular'
+						// text-shadow: 2px 0px 7px rgba(150, 150, 150, 1)
+						color: #FFF
+						text-align: left
+						// z-index: 30
+						b
+							font-family: 'allerbold'
+							font-weight: normal
+			.active
+				.container
+					em
+						z-index: 30
+
+///======================================================================================================
+//06. popContact
+//=======================================================================================================
+
+.popContact 
+	position: fixed
+	right: 0
+	top: 150px
+	z-index: 9999999999
+	-moz-animation-name: popContact
+	-moz-animation-duration: 1s
+	-moz-animation-delay: 0s
+	-moz-animation-iteration-count: 1
+	-moz-animation-timing-function: ease-out
+	-moz-animation-direction: normal
+	-webkit-animation-name: popContact
+	-webkit-animation-duration: 1s
+	-webkit-animation-delay: 0s
+	-webkit-animation-iteration-count: 1
+	-webkit-animation-timing-function: ease-out
+	-webkit-animation-direction: normal
+	background: RGBA(230, 122, 29, 0.69)
+	border-radius: 2px
+	color: #fff
+	padding: 20px 40px 20px 20px
+	font-size: 17px
+	font-family: 'aller_lightregular'
+	text-align: center
+	span
+		font-size: 24px
+		font-family: 'allerregular'
+		text-align: center
+
+@-moz-keyframes popContact 
+	0% 
+		right: -200px
+	100% 
+		right: 0
+
+@-webkit-keyframes popContact 
+	0% 
+		right: -200px
+	100% 
+		right: 0
+
+
+
+///======================================================================================================
+//07. Home
+//=======================================================================================================
+
+.home
+	#content
+		.cbp-bislideshow
+			em
+				text-shadow: 2px 0px 7px rgba(0, 0, 0, 0.5)
+				text-align: left
+				color: inherit
+				text-transform: none
+				b
+					font-family: 'allerbold'
+					font-weight: normal
+		.block1
+			.serveis
+				background: #fff
+				border-radius: 4px
+				margin: 0 auto
+				position: relative
+				margin-top: -105px
+				width: 1340px
+			h1
+				color: #fff
+				font-family: 'aller_lightitalic'
+				font-size: 48px
+				text-transform: none
+				b
+					font-family: 'allerbold_italic'
+					font-weight: normal
+		.container
+			margin-top: 140px
+			.qSom
+				width: 40%
+				position: absolute
+				top: -5px
+				left: 0
+				background: #fff
+				border-radius: 4px
+				z-index: 10
+				padding: 0 50px 30px 0 
+				img
+					margin-left: -20px
+					float: left
+				h2
+					color: #E67A1D
+					text-transform: none
+					text-align: left
+					margin: 24px 0
+					padding: 0
+					font-size: 30px
+					width: auto
+				.text
+					color: #666666
+					font-size: 16px
+					float: left
+					line-height: 1.8em
+					margin: 30px 0
+				.mas
+					color: #E67A1D
+					font-size: 12px
+					text-transform: uppercase
+					font-family: 'open_sanssemibold'
+					position: relative
+					float: right
+			.imagen
+				width: 95%
+				position: relative
+				float: right
+				img
+					width: 100%
+		.newsList
+			text-align: center
+			.lastNews
+				margin: 0 auto
+				position: relative
+				text-align: center
+				width: 310px
+				img
+					float: left
+				h2
+					margin: 0
+					padding: 0
+					float: left
+					margin-top: 15px
+					margin-left: 10px
+					width: auto
+					text-transform: none
+					font-size: 30px
+					color: #E67A1D
+					padding-bottom: 70px
+					font-family: 'allerregular'
+			.columnsCSS
+				-webkit-column-count: 4
+				-moz-column-count: 4
+				column-count: 4
+				column-gap: 1.8em
+				-moz-column-gap: 1.8em
+				-webkit-column-gap: 1.8em
+				padding: inherit
+				position: relative
+				float: left
+				ul
+					li
+						background: #F2F2F2
+						display: inline-block
+						padding-left: 0
+						position: relative
+						width: 293px
+						height: 647px
+						&:before
+							display: none
+						&:nth-child(2n+2)
+							.news
+								position: absolute
+								top: inherit
+								left: 0
+								bottom: 0
+							.imagen
+								position: absolute
+								bottom: inherit
+								top: 0
+								left: 0
+								width: 293px
+								height: 293px
+						.news
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							padding: 25px
+							height: 355px
+							.date
+								color: #E67A1D
+								font-size: 12px
+								text-transform: uppercase
+								font-family: 'open_sanssemibold'
+								width: 80%
+								text-align: left
+								padding-bottom: 15px
+								position: absolute
+								top: 20px
+								left: 29px
+							.title
+								position: relative
+								float: left
+								width: 100%
+								display: table
+								.element
+									display: table-cell
+									vertical-align: middle
+									width: 100%
+									margin: 0 auto
+									height: 270px
+									padding-top: 45px
+									overflow: hidden
+									h2
+										margin: 0
+										padding: 0
+							.mas
+								width: 80%
+								border-top: 1px solid #E4E4E4
+								text-align: right
+								padding-top: 15px
+								position: absolute
+								bottom: 20px
+								left: 29px					
+						.imagen
+							position: absolute
+							bottom: 0
+							left: 0
+							width: 293px
+							height: 293px
+
+
+///======================================================================================================
+//08. serveis
+//=======================================================================================================
+
+.srvPage
+	#content
+		.cbp-bislideshow
+			em
+				h1
+					margin: 0
+					padding: 0
+					font-size: inherit
+					line-height: inherit
+					font-family: 'allerregular'
+					text-shadow: 2px 0px 7px rgba(0, 0, 0, 0.5)
+					text-align: left
+					color: inherit
+					text-transform: none
+					b
+						font-family: 'allerbold'
+						font-weight: normal
+		.row
+			.container
+				.serveis
+					float: left
+					position: relative
+					width: 100%
+					text-align: center
+					margin: 50px 0
+					.item
+						padding: 0
+						// background: #f2f2f2
+						padding: 0px 25px
+						display: inline-block
+						// border: 1px solid #d6d6d6
+						background: #efefef
+						border-radius: 4px
+						width: 22%
+						margin: 1%
+						border: 1px solid #d4d4d4
+						.element
+							display: table-cell
+							vertical-align: middle
+							width: 100%
+							margin: 0 auto
+							height: 190px
+							overflow: hidden
+							width: 360px
+							h2
+								text-align: center
+								font-size: 18px
+								&:hover
+									color: #DF6668
+		.block1
+			background: none
+			height: inherit
+			.intro
+				background: #fff
+				border-radius: 4px
+				margin: 0 auto
+				position: relative
+				margin-top: -149px
+				width: 1340px
+				.columnsCSS 
+					-webkit-column-count: 2
+					-moz-column-count: 2
+					column-count: 2
+					column-gap: 5.2em
+					-moz-column-gap: 5.2em
+					-webkit-column-gap: 5.2em
+					padding: 40px 55px
+					min-height: 160px
+					h2
+						color: #DF6668
+						font-family: 'allerregular'
+						font-size: 30px
+						text-transform: none
+						margin: 48px 0 28px 0
+						padding: 0
+						text-align: left
+						width: auto
+					img
+						width: 115px
+						margin-left: -27px
+						margin-bottom: -19px
+						float: left
+						&.signature
+							width: inherit
+							margin: inherit
+							float: none
+							display: inline-block
+					.text
+						font-size: 16px
+						line-height: 2em
+						float: left
+
+		.FAQ
+			margin-top: 50px
+			background: #F4F4F4
+			padding-top: 100px
+			margin-bottom: 90px
+			.container 
+				h3
+					font-size: 50px
+					font-family: 'aller_lightitalic'
+					text-align: center
+					color: #DF6668
+					margin-bottom: 20px
+					b
+						font-family: 'allerbold_italic'
+						font-weight: normal
+				ul
+					padding: 80px
+					margin-top: 0
+					float: left
+					position: relative
+					&>li
+						background: #fff
+						-webkit-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+						-moz-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+						box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+						width: 90%
+						margin-top: 20px
+						ol
+							padding-left: 50px
+							margin-top: 25px
+							li
+								list-style-type: number
+								padding-left: 0
+								&:before
+									content: ''
+									left: 0
+						&:nth-child(2n+1)
+							border-radius: 0 30px 30px 30px
+							float: left
+							padding: 35px 50px 35px 70px
+							font-size: 24px
+							color: #DF6668
+							font-family: 'aller_lightitalic'
+							&:before
+								content: ""
+								background: url('/images/icons/iconFAQ-01.svg')
+								border-radius: 50%
+								border: 9px solid #fff
+								width: 82px
+								height: 82px
+								position: absolute
+								top: -76px
+								left: -50px
+								-webkit-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+								-moz-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+								box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+						&:nth-child(2n+2)
+							border-radius: 30px 0px 30px 30px
+							float: right
+							padding: 35px 70px 35px 50px
+							&:before
+								content: ""
+								background: url('/images/icons/iconFAQ-02.svg')
+								border-radius: 50%
+								border: 9px solid #fff
+								width: 82px
+								height: 82px
+								position: absolute
+								top: -76px
+								right: -50px
+								-webkit-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+								-moz-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+								box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.20)
+								left: inherit
+		.newsList
+			text-align: center
+			.lastNews
+				margin: 0 auto
+				position: relative
+				text-align: center
+				width: 390px
+				img
+					float: left
+				h2
+					margin: 0
+					padding: 0
+					float: left
+					margin-top: 15px
+					margin-left: 10px
+					width: auto
+					text-transform: none
+					font-size: 30px
+					color: #E67A1D
+					padding-bottom: 70px
+					font-family: 'allerregular'
+			.columnsCSS
+				-webkit-column-count: 2
+				-moz-column-count: 2
+				column-count: 2
+				column-gap: 1.8em
+				-moz-column-gap: 1.8em
+				-webkit-column-gap: 1.8em
+				padding: inherit
+				position: relative
+				float: left
+				width: 100%
+				ul
+					li
+						background: #F2F2F2
+						display: inline-block
+						padding-left: 0
+						position: relative
+						width: 100%
+						height: 293px
+						&:before
+							display: none
+						.news
+							position: absolute
+							top: 0
+							right: 0
+							width: 321px
+							padding: 25px
+							height: 293px
+							.date
+								color: #E67A1D
+								font-size: 12px
+								text-transform: uppercase
+								font-family: 'open_sanssemibold'
+								width: 80%
+								text-align: left
+								padding-bottom: 15px
+								position: absolute
+								top: 20px
+								left: 29px
+							.title
+								position: relative
+								float: left
+								width: 100%
+								display: table
+								.element
+									display: table-cell
+									vertical-align: middle
+									width: 100%
+									margin: 0 auto
+									height: 190px
+									padding-top: 45px
+									overflow: hidden
+									h2
+										text-align: left
+										margin: 0
+										padding: 0
+							.mas
+								width: 80%
+								border-top: 1px solid #E4E4E4
+								text-align: right
+								padding-top: 15px
+								position: absolute
+								bottom: 20px
+								left: 29px					
+						.imagen
+							position: absolute
+							bottom: 0
+							left: 0
+							width: 293px
+							height: 293px						
+
+//COLUMNA SERVEIS DESTACADOS
+.columnsCSS 
+	-webkit-column-count: 4
+	-moz-column-count: 4
+	column-count: 4
+	column-gap: 5.2em
+	-moz-column-gap: 5.2em
+	-webkit-column-gap: 5.2em
+	padding: 40px 55px
+	ul.serveisList
+		color: #969696
+		li
+			display: inline-block
+			padding-left: 0
+			line-height: 1.4em
+			&:before
+				display: none
+			&:after
+				content: ""
+				border-right: 1px solid #C9C9C9
+				height: 265px
+				width: 3px
+				position: absolute
+				right: -2.3em
+				top: 40px
+			img
+				float: left
+				margin-left: -40px
+			h2
+				margin: 0
+				float: left
+				margin-top: 8px
+				width: inherit
+				text-transform: none
+			.text
+				width: 100%
+				font-family: 'open_sanslight'
+				font-size: 13px
+				float: left
+			.mas
+				width: 100%
+				margin-top: 40px
+				float: left
+			&:nth-child(1)
+				h2, .mas
+					color: #DF6668
+			&:nth-child(2)
+				h2, .mas
+					color: #6CA6B3
+			&:nth-child(3)
+				h2, .mas
+					color: #B0B885
+			&:nth-child(4)
+				&:after
+					display: none
+				h2, .mas
+					color: #9179B8
+
+//paginas de servicios colores
+.herencia
+	#content
+		.block1
+			.intro
+				.columnsCSS 
+					h2
+						color: #6CA6B3
+		.row
+			.container
+				.serveis
+					.item
+						.element
+							h2
+								&:hover
+									color: #6CA6B3
+		.FAQ
+			.container 
+				h3
+					color: #6CA6B3
+				ul
+					&>li
+						&:nth-child(2n+1)
+							color: #6CA6B3
+							&:before
+								background: url('/images/icons/iconFAQ-01-02.svg')
+						&:nth-child(2n+2)
+							&:before
+								background: url('/images/icons/iconFAQ-02.svg')
+
+.bancario
+	#content
+		.block1
+			.intro
+				.columnsCSS 
+					h2
+						color: #B0B885
+		.row
+			.container
+				.serveis
+					.item
+						.element
+							h2
+								&:hover
+									color: #B0B885
+		.FAQ
+			.container 
+				h3
+					color: #B0B885
+				ul
+					&>li
+						&:nth-child(2n+1)
+							color: #B0B885
+							&:before
+								background: url('/images/icons/iconFAQ-01-03.svg')
+						&:nth-child(2n+2)
+							&:before
+								background: url('/images/icons/iconFAQ-02.svg')								
+.inmobiliari
+	#content
+		.block1
+			.intro
+				.columnsCSS 
+					h2
+						color: #9179B8
+		.row
+			.container
+				.serveis
+					.item
+						.element
+							h2
+								&:hover
+									color: #9179B8
+		.FAQ
+			.container 
+				h3
+					color: #9179B8
+				ul
+					&>li
+						&:nth-child(2n+1)
+							color: #9179B8
+							&:before
+								background: url('/images/icons/iconFAQ-01-04.svg')
+						&:nth-child(2n+2)
+							&:before
+								background: url('/images/icons/iconFAQ-02.svg')									
+//EMPRESA
+
+.empresa
+	#content
+		.companyservices
+			float: left
+			width: 100%
+			padding: 0 55px
+
+			.row
+				margin: 0 0 55px
+				border-top: 1px solid #DDD
+				padding: 40px 0
+			.half.fright
+				float: right
+
+			h2
+				color: #E67A1D
+				text-transform: none
+				text-align: left
+				margin: 0 0 1em
+				padding: 0
+				font-size: 30px
+			.text
+				color: #666666
+				font-size: 16px
+				float: left
+				line-height: 1.8em
+				margin: 0
+			li:before 
+				color: #E67A1D
+			img 
+				max-width: 100%
+		.row2
+			position: relative
+			float: left
+			width: 100%
+			margin: 70px 0 100px 0
+			.container
+				.imagen
+					width: 80%
+					position: relative
+					float: right
+					overflow: hidden
+					height: 515px
+					img
+						width: 100%
+		.qSom2
+			width: 40%
+			position: absolute
+			top: -5px
+			left: 0
+			background: #fff
+			border-radius: 4px
+			z-index: 10
+			padding: 0 50px 30px 0 
+			img
+				margin-left: -20px
+			h2
+				color: #E67A1D
+				text-transform: none
+				text-align: left
+				margin: 0
+				padding: 0
+				font-size: 30px
+			.text
+				color: #666666
+				font-size: 16px
+				float: left
+				line-height: 1.8em
+				margin: 30px 0
+			.mas
+				color: #E67A1D
+				font-size: 12px
+				text-transform: uppercase
+				font-family: 'open_sanssemibold'
+				position: relative
+				float: right
+		.block1
+			.intro
+				.columnsCSS 
+					h2
+						color: #E67A1D
+			.container
+				.columnsCSS 
+					-webkit-column-count: 2
+					-moz-column-count: 2
+					column-count: 2
+					column-gap: 5.2em
+					-moz-column-gap: 5.2em
+					-webkit-column-gap: 5.2em
+					padding: 40px 55px
+					font-size: 16px
+					.text
+						div
+							display: inline-block
+							h2
+								text-align: left
+							.numero
+								color: #E67A1D
+								text-transform: none
+								text-align: left
+								margin: 0
+								padding: 0
+								font-size: 30px
+								font-family: 'allerregular'
+								padding: 50px 0 15px 0
+								float: left
+								position: relative
+		.block2
+			padding-bottom: 100px
+			margin-top: 50px
+			h1
+				text-transform: none
+				font-family: 'aller_lightregular'
+				font-size: 50px
+				color: #E67A1D
+				margin-bottom: 0
+			.equipo
+				ul
+					text-align: center
+					width: 100%
+					position: relative
+					li
+						padding-left: 0
+						display: inline-block
+						padding: 0px 35px
+						width: 45%
+						.portrait
+							float: left
+							position: relative
+							line-height: 0
+							border-bottom: 1px solid #8C8C8C
+							text-align: right
+							width: 100%
+							img
+								filter: grayscale(100%)
+								-webkit-filter: grayscale(100%)
+								-moz-filter: grayscale(100%)
+								-ms-filter: grayscale(100%)
+								-o-filter: grayscale(100%)
+								filter: gray
+								width: 90% 
+								&:hover
+									filter: grayscale(0%)
+									-webkit-filter: grayscale(0%)
+									-moz-filter: grayscale(0%)
+									-ms-filter: grayscale(0%)
+									-o-filter: grayscale(0%)
+									filter: none
+						&:before
+							content: ''
+						// &:nth-child(1), &:nth-child(2)
+						// 	width: 50%
+						.desc 
+							position: absolute
+							left: 35px
+							top: 185px
+							h2, h2 a
+								font-size: 24px
+								color: #E67A1D
+								text-align: left
+								margin: 0
+								padding: 0
+								p
+									margin-bottom: 0
+							.textintro
+								text-align: left
+								font-family: 'open_sanslight_italic'
+								font-size: 18px
+								position: relative
+								float: left
+								width: 100%
+							.linkedin
+								float: left
+								position: relative
+								text-align: left
+								width: 100%
+								margin-top: 20px
+		.row
+			.principios
+				.columnsCSS
+					-webkit-column-count: 2
+					-moz-column-count: 2
+					column-count: 2
+					column-gap: 5.2em
+					-moz-column-gap: 5.2em
+					-webkit-column-gap: 5.2em
+					padding: inherit
+					position: relative
+					float: left
+					h2
+						text-transform: none
+						font-family: 'aller_lightregular'
+						font-size: 22px
+						color: #E67A1D
+						margin: 0
+						text-align: left
+			.serveis
+				margin: 0 auto
+				position: relative
+				width: 1340px
+			.section
+				h2
+					text-transform: none
+					font-family: 'aller_lightregular'
+					font-size: 50px
+					color: #E67A1D
+					margin-bottom: 0
+			.container
+				margin-top: 75px
+				.qSom
+					width: 40%
+					position: absolute
+					top: -5px
+					right: 0
+					background: #fff
+					border-radius: 4px
+					z-index: 10
+					padding: 20px 50px 30px 0 
+					h2
+						color: #E67A1D
+						text-transform: none
+						text-align: left
+						margin: 0
+						padding: 0
+						font-size: 30px
+						padding-left: 40px
+					.text
+						color: #666666
+						font-size: 16px
+						float: right
+						line-height: 1.8em
+						margin: 30px 0
+						padding-left: 40px
+					.mas
+						color: #E67A1D
+						font-size: 12px
+						text-transform: uppercase
+						font-family: 'open_sanssemibold'
+						position: relative
+						float: left
+						padding-left: 40px
+				.imagen
+					width: 90%
+					position: relative
+					float: left
+					img
+						width: 100%
+
+//CONTACTO
+
+.contacto
+	#content	
+		.row
+			.map
+				height: 1020px			
+		.mapas
+			margin-top: 0
+			.mapcontent
+				.ubicacion
+					top: 150px
+					z-index: 50
+					#centros
+						p
+							margin-bottom: 0
+		li
+			padding-left: 0
+			&:before
+				display: none
+		.link
+			width: inherit
+	#footMap
+		display: none
+
+.mapas .ubicacion 
+	width: 374px
+	// height: 864px
+	position: absolute
+	top: 50px
+	left: 90px
+	background: #fff
+	border-radius: 4px
+	padding: 40px 75px
+	z-index: 10	
+	height: auto
+
+//aside
+
+.noticia
+
+	#content
+		.cbp-bislideshow em h1 
+			font-size: .8em
+			line-height: 1em
+
+		.block1
+			margin-bottom: 75px
+		.date
+			color: #E67A1D
+			margin-bottom: 25px
+		.newsList
+			text-align: center
+			.lastNews
+				margin: 0 auto
+				position: relative
+				text-align: center
+				width: 310px
+				img
+					float: left
+				h2
+					margin: 0
+					padding: 0
+					float: left
+					margin-top: 15px
+					margin-left: 10px
+					width: auto
+					text-transform: none
+					font-size: 30px
+					color: #E67A1D
+					padding-bottom: 70px
+					font-family: 'allerregular'
+			.columnsCSS
+				-webkit-column-count: 4
+				-moz-column-count: 4
+				column-count: 4
+				column-gap: 1.8em
+				-moz-column-gap: 1.8em
+				-webkit-column-gap: 1.8em
+				padding: inherit
+				position: relative
+				float: left
+				ul
+					li
+						background: #F2F2F2
+						display: inline-block
+						padding-left: 0
+						position: relative
+						width: 293px
+						height: 647px
+						&:before
+							display: none
+						&:nth-child(2n+2)
+							.news
+								position: absolute
+								top: inherit
+								left: 0
+								bottom: 0
+							.imagen
+								position: absolute
+								bottom: inherit
+								top: 0
+								left: 0
+								width: 293px
+								height: 293px
+						.news
+							position: absolute
+							top: 0
+							left: 0
+							width: 100%
+							padding: 25px
+							height: 355px
+							.date
+								color: #E67A1D
+								font-size: 12px
+								text-transform: uppercase
+								font-family: 'open_sanssemibold'
+								width: 80%
+								text-align: left
+								padding-bottom: 15px
+								position: absolute
+								top: 20px
+								left: 29px
+							.title
+								position: relative
+								float: left
+								width: 100%
+								display: table
+								.element
+									display: table-cell
+									vertical-align: middle
+									width: 100%
+									margin: 0 auto
+									height: 270px
+									padding-top: 45px
+									overflow: hidden
+									h2
+										margin: 0
+										padding: 0
+							.mas
+								width: 80%
+								border-top: 1px solid #E4E4E4
+								text-align: right
+								padding-top: 15px
+								position: absolute
+								bottom: 20px
+								left: 29px					
+						.imagen
+							position: absolute
+							bottom: 0
+							left: 0
+							width: 293px
+							height: 293px
+
+.cv
+	header
+		background: rgba(214,118,0,0.5)
+		background: -moz-linear-gradient(top, rgba(185, 119, 38, 0.5) 0%, rgba(255,255,255,0) 100%)
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(185, 119, 38, 0.5)), color-stop(100%, rgba(255,255,255,0)))
+		background: -webkit-linear-gradient(top, rgba(185, 119, 38, 0.5) 0%, rgba(255,255,255,0) 100%)
+		background: -o-linear-gradient(top, rgba(185, 119, 38, 0.5) 0%, rgba(255,255,255,0) 100%)
+		background: -ms-linear-gradient(top, rgba(185, 119, 38, 0.5) 0%, rgba(255,255,255,0) 100%)									
+	#content
+		padding-bottom: 0
+		.block2
+			margin-top: 0
+			padding-top: 200px
+			.equipo
+				h2
+					font-size: 44px !important
+				li
+					width: 70% !important
+				.portrait
+					float: left
+					position: relative
+					line-height: 0
+					border-bottom: 1px solid #8C8C8C
+					text-align: right
+					width: 100%
+					img
+						filter: grayscale(0%) !important
+						-webkit-filter: grayscale(0%) !important
+						-moz-filter: grayscale(0%) !important
+						-ms-filter: grayscale(0%) !important
+						-o-filter: grayscale(0%) !important
+						filter: color !important
+						width: initial  !important
+			.container
+				.subcontainer
+					padding-top: 50px
+
+
+.maServicio
+	#content
+		ul
+			float: left
+			position: relative
+			width: 100%
+			li
+				&:before
+					content: '\e832'
+					font-family: 'iconsltw2'
+		p
+			position: relative
+			float: left
+			width: 100%
+
+.listaNews
+	header
+		height: 140px
+		z-index: 10
+	#content
+		.row
+			.container
+				h1
+					position: relative
+					float: left
+					width: 100%
+				.categorias
+					background: #fff
+					width: 100%
+					border-radius: 4px
+					text-align: center
+					z-index: 30
+					float: left
+					position: relative
+					border: 1px solid #f2f2f2
+					padding: 20px 0
+					margin-bottom: 30px
+					ul
+						list-style: none
+						li
+							font-family: 'allerregular'
+							display: inline
+							padding-left: 0
+							a
+								color: inherit
+								text-transform: uppercase
+								margin: 0 15px
+							&:before
+								display: none !important
+						.current, a:hover
+							color: inherit
+							text-transform: uppercase
+							margin: 0 15px
+							&:after
+								// content: ''
+								// width: 100%
+								// height: 3px
+								// background: #E67A1D
+								// position: absolute
+								// bottom: 0
+								// left: 0
+								content: ''
+								width: 5px
+								height: 5px
+								background: #E67A1D
+								position: absolute
+								bottom: -9px
+								left: 45%
+								border-radius: 50%
+							
+							
+
+				.newslist
+					text-align: center
+					.lastNews
+						margin: 0 auto
+						position: relative
+						text-align: center
+						width: 310px
+						img
+							float: left
+						h2
+							margin: 0
+							padding: 0
+							float: left
+							margin-top: 15px
+							margin-left: 10px
+							width: auto
+							text-transform: none
+							font-size: 30px
+							color: #E67A1D
+							padding-bottom: 70px
+							font-family: 'allerregular'
+					ul
+						float: left
+						position: relative
+						width: 100%
+						li
+							background: #F2F2F2
+							display: inline-block
+							padding-left: 0
+							position: relative
+							width: 293px
+							height: 647px
+							margin: 9px
+							&:before
+								display: none
+							&:nth-child(2n+2)
+								.news
+									position: absolute
+									top: inherit
+									left: 0
+									bottom: 0
+								.imagen
+									position: absolute
+									bottom: inherit
+									top: 0
+									left: 0
+									width: 293px
+									height: 293px
+							.news
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								padding: 25px
+								height: 355px
+								.date
+									color: #E67A1D
+									font-size: 12px
+									text-transform: uppercase
+									font-family: 'open_sanssemibold'
+									width: 80%
+									text-align: left
+									padding-bottom: 15px
+									position: absolute
+									top: 20px
+									left: 29px
+								.title
+									position: relative
+									float: left
+									width: 100%
+									display: table
+									.element
+										display: table-cell
+										vertical-align: middle
+										width: 100%
+										margin: 0 auto
+										height: 270px
+										padding-top: 45px
+										overflow: hidden
+										h2
+											margin: 0
+											padding: 0
+								.mas
+									width: 80%
+									border-top: 1px solid #E4E4E4
+									text-align: right
+									padding-top: 15px
+									position: absolute
+									bottom: 20px
+									left: 29px					
+							.imagen
+								position: absolute
+								bottom: 0
+								left: 0
+								width: 293px
+								height: 293px
+.cv
+	#content
+		.center
+			text-align: center
+
+// MB PHONE					
+
+.btnMb
+	width: 57px
+	height: 57px
+	background: #E67A1D
+	margin: 0 20px 20px 0
+	border-radius: 50%
+	position: fixed
+	bottom: 0
+	right: 0
+	z-index: 50
+	-webkit-box-shadow: 4px 2px 15px 0px rgba(0,0,0,0.3)
+	-moz-box-shadow: 4px 2px 15px 0px rgba(0,0,0,0.3)
+	box-shadow: 4px 2px 15px 0px rgba(0,0,0,0.3)
+	&:before
+		content: '\e82b'
+		font-family: 'iconsltw2'
+		color: #fff
+		font-size: 24px
+		text-align: center
+		width: 57px
+		position: absolute
+		margin-top: 19px
+
+

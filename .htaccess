@@ -1,0 +1,121 @@
+ErrorDocument 404 http://carlosgarciacastilla.com/WEB/404.php
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /WEB
+RewriteRule ^(.*)-(n)-([0-9]+)-(.*)/? ficha_noticias.php?lang=$4&id=$3 [L] 
+RewriteRule ^(.*)-(s)-([0-9]+)-(.*)/? ficha_servicios.php?lang=$4&id=$3 [L] 
+RewriteRule ^(.*)-(t)-([0-9]+)-(.*)/? listado_productos.php?lang=$4&id=$3 [L]  
+RewriteRule ^(.*)-(p)-([0-9]+)-(.*)/? ficha_productos.php?lang=$4&id=$3 [L] 
+RewriteRule ^sitemap\.xml$ sitemap_xml.php [L] 
+RewriteRule ^ftpsync\.settings$ index.php [L] 
+RewriteRule ^abogados-barcelona$ contacto.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^advocats-barcelona$ contacto.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^contact$ contacto.php?lang=en&%{QUERY_STRING} [L] 
+RewriteRule ^asesoramiento-legal$ empresa.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^assessorament-legal$ empresa.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^about$ empresa.php?lang=en&%{QUERY_STRING} [L] 
+RewriteRule ^cookies$ politica-cookies.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^cookies-ca$ politica-cookies.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^cookies$ politica-cookies.php?lang=en&%{QUERY_STRING} [L] 
+RewriteRule ^index.html$ index.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^advocats-matrimonialistes-barcelona$ index.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^home$ index.php?lang=en&%{QUERY_STRING} [L] 
+RewriteRule ^noticias-derecho$ listado_noticias.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^noticies-dret$ listado_noticias.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^news$ listado_noticias.php?lang=en&%{QUERY_STRING} [L] 
+RewriteRule ^legal$ legal.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^legal-ca$ legal.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^legal-en$ legal.php?lang=en&%{QUERY_STRING} [L] 
+RewriteRule ^abogados-matrimonialistas$ listado_productos.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^advocats-matrimonialistes$ listado_productos.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^derecho-inmobiliario$ inmobiliari.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^dret-immobiliari$ inmobiliari.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^matrimonialistas-barcelona$ matrimonis.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^advocats-divorci-barcelona$ matrimonis.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^herencias-barcelona$ herencia.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^herencies-barcelona$ herencia.php?lang=ca&%{QUERY_STRING} [L] 
+RewriteRule ^derecho-bancario-barcelona$ bancario.php?lang=es&%{QUERY_STRING} [L] 
+RewriteRule ^dret-bancari-barcelona$ bancario.php?lang=ca&%{QUERY_STRING} [L] 
+
+	#compress text, html, javascript, css, xml:
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+	AddOutputFilterByType DEFLATE image/svg+xml
+
+	<ifmodule mod_mime.c>
+	AddType font/opentype .otf
+	AddType font/eot .eot
+	AddType font/truetype .ttf
+	</ifmodule>
+
+	AddOutputFilterByType DEFLATE font/opentype
+	AddOutputFilterByType DEFLATE font/truetype
+	AddOutputFilterByType DEFLATE font/eot
+
+	
+
+	<IfModule mod_expires.c>
+	  ExpiresActive on
+	# Perhaps better to whitelist expires rules? Perhaps.
+	  ExpiresDefault                          "access plus 1 month"
+	# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+	  ExpiresByType text/cache-manifest       "access plus 0 seconds"
+	# Your document html
+	  ExpiresByType text/html                 "access plus 0 seconds"
+	# Data
+	  ExpiresByType application/json          "access plus 0 seconds"
+	  ExpiresByType application/xml           "access plus 0 seconds"
+	  ExpiresByType text/xml                  "access plus 0 seconds"
+	# Feed
+	  ExpiresByType application/atom+xml      "access plus 1 hour"
+	  ExpiresByType application/rss+xml       "access plus 1 hour"
+	# Favicon (cannot be renamed)
+	  ExpiresByType image/x-icon              "access plus 1 week"
+	# Media: images, video, audio
+	  ExpiresByType audio/ogg                 "access plus 1 month"
+	  ExpiresByType image/gif                 "access plus 1 month"
+	  ExpiresByType image/jpeg                "access plus 1 month"
+	  ExpiresByType image/png                 "access plus 1 month"
+	  ExpiresByType video/mp4                 "access plus 1 month"
+	  ExpiresByType video/ogg                 "access plus 1 month"
+	  ExpiresByType video/webm                "access plus 1 month"
+	# HTC files  (css3pie)
+	  ExpiresByType text/x-component          "access plus 1 month"
+	# Webfonts
+	  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+	  ExpiresByType application/x-font-ttf    "access plus 1 month"
+	  ExpiresByType application/x-font-woff   "access plus 1 month"
+	  ExpiresByType font/opentype             "access plus 1 month"
+	  ExpiresByType image/svg+xml             "access plus 1 month"
+	# CSS and JavaScript
+	  ExpiresByType application/javascript    "access plus 1 week"
+	  ExpiresByType text/css                  "access plus 1 week"
+	</IfModule>
+	# CACHE CONTROL
+
+# 1 MONTH
+<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav|ttf|otf|eot|svg)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+# 1 WEEK
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|js|css)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+# 1 HOUR
+<FilesMatch "\.(txt|xml)$">
+Header set Cache-Control "max-age=3600, public"
+</FilesMatch>
+
+# NEVER CACHE
+<FilesMatch "\.(html|htm|php|cgi|pl)$">
+Header set Cache-Control "max-age=0, private, no-store, no-cache, must-revalidate"
+</FilesMatch>

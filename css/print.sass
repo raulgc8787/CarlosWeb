@@ -1,0 +1,32 @@
+
+// Importamos variables
+@import "modules/variables.sass"
+
+// Importamos las tipografias
+@import "../../../typesass/types.sass"
+
+// Importamos el core
+@import "modules/core.sass"
+
+// Importamos estilos modules del proyecto web
+@import "modules/modules.sass"
+
+// Importamos estilos adhoc del proyecto web
+@import "modules/adhoc.sass"
+
+// Imprimimos como tablet
+$responsivePass: 'mobile'
+@import "modules/variables.sass"
+@import "modules/responsive.sass"
+
+nav, aside, .credit-list, .button, .cbp-bislideshow, .cbp-bicontrols, #language-nav, #cookies_msg_subwrapper
+	display: none!important
+div
+	float: left
+	width: 100%
+	clear: left	
+h1, h2, h3, h4 
+	color: #232323
+	background: none
+svg
+	fill: #232323

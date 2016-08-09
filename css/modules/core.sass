@@ -1,0 +1,1184 @@
+
+//Name: layout.css
+//Author: Latevaweb S.L.
+//Version: 1.0.0
+
+//-
+
+
+//0.T Tabla de contenidos
+//========================
+
+	//00. CLASES GENERALES (first, last, ...)
+	//---------------------------------------------------
+		//0.1 = Tipografias
+		//0.2 = Sprites
+
+	//01. ESTRUCTURA (body,html,header,footer,content, ...)
+	//---------------------------------------------------
+
+	//02. GRID SYSTEM
+	//---------------------------------------------------
+
+	//03. HEADER
+	//---------------------------------------------------
+		//3.1 = Logo 
+		//3.2 = Nav 
+		//3.3 = Submenú Nav
+		//3.4 = Language Nav
+		//3.5 = Social Nav
+
+	//04. TEXTOS
+	//---------------------------------------------------
+		//4.1 = Texts formats
+		//4.2 = H's
+		//4.3 = Links
+
+	//05. LISTS
+	//---------------------------------------------------
+		//5.1 Listado dinámico tipo (noticias, productos, tec)
+		//5.2 Paginación listado dinámico
+		//5.3 TerNav (Solo Para tiendas)
+
+	//06. FORMS
+	//---------------------------------------------------
+		//6.1 = Labels
+		//6.2 = Inputs + Textarea
+		//6.3 = Selects
+		//6.4 = Inputs in Forms
+		//6.5 = Errores
+
+	//07. TABLES
+	//---------------------------------------------------
+
+	//08. BUTTONS
+	//---------------------------------------------------
+		//8.1 = Tamaños botones
+		//8.2 = Tipos botones
+
+	//09. FOOTER
+	//---------------------------------------------------
+
+	//10. COOKIES
+	//---------------------------------------------------
+
+
+///======================================================================================================
+//00. CLASES GENERALES
+//======================================================================================================= 
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	&:focus
+		outline: 0
+ul 
+	list-style: none
+a 
+	text-decoration: none
+table 
+	border-collapse: collapse
+fieldset,img 
+	border: 0
+dl 
+	clear: both
+dt,dd 
+	float: left
+
+.fleft
+	float: left
+
+.fright
+	float: right
+
+.fNull
+	float: none
+
+.clearfix
+	clear: both
+
+.clearL
+	clear: left
+
+.clearR
+	clear: right
+
+.roundCorner
+	border-radius: $roundedGlobal
+
+.align-R
+	text-align: right
+
+.align-L
+	text-align: left
+
+.align-C
+	text-align: center
+
+.first
+	margin-left: 0 !important
+
+.last
+	margin-right: 0 !important
+
+/* Row and blocks */
+.row
+	width: 100%
+	float: left
+.fullCol
+	padding: 0 $medianil/2+px
+.block1
+	width: 100%
+	float: left
+	background: $defBgBlock
+.block2
+	width: 100%
+	float: left
+	background: $secBgBlock
+.block3
+	width: 100%
+	float: left
+	background: $thrBgBlock
+.half
+	width: 50%
+	float: left
+
+	li
+		width: 100%
+	
+	div
+		padding: $liFormPadding
+
+.map
+	width: 100%
+	height: $mapHeight
+
+// 0.2 = Sprites
+//--------------------------------------------------------------- 
+
+// Social Sprite 
+
+// .socialSprite
+
+// 	display: inline-block
+// 	background: $bgSpriteSocial
+// 	width: $withHeightSprite+px
+// 	height: $withHeightSprite+px
+
+// 	// multiplicamos la posicion X por la anchura y altura definida
+
+// 	&.facebook, &.facebook:hover
+// 		background-position: -$withHeightSprite*0+px $withHeightSprite*0
+// 	&.twitter, &.twitter:hover
+// 		background-position: -$withHeightSprite*1+px $withHeightSprite*0
+// 	&.instagram, &.instagram:hover
+// 		background-position: -$withHeightSprite*2+px $withHeightSprite*0
+// 	&.youtube, &.youtube:hover
+// 		background-position: -$withHeightSprite*3+px $withHeightSprite*0
+// 	&.googleplus, &.googleplus:hover
+// 		background-position: -$withHeightSprite*4+px $withHeightSprite*0
+// 	&.pinterest, &.pinterest:hover
+// 		background-position: -$withHeightSprite*5+px $withHeightSprite*0
+// 	&.linkedin, &.linkedin:hover
+// 		background-position: -$withHeightSprite*6+px $withHeightSprite*0
+// 	&.vimeo, &.vimeo:hover
+// 		background-position: -$withHeightSprite*7+px $withHeightSprite*0
+
+
+
+
+
+//=======================================================================================================
+//01. ESTRUCTURA
+//=======================================================================================================
+
+html, body
+	background: $BgBodyGlobal
+	padding: 0px 
+	margin: 0px
+	font-family: $fontFamilyGlobal
+	font-size: $fontSizeGlobal	
+	line-height: $lineHeightGlobal
+	color: $colorGlobal
+	overflow-x: hidden
+#generalCont
+	width: 100%
+#wrapper
+	position: relative
+	width: 100%
+	float: left
+	background: #FFFFFF
+
+#content
+	position: relative
+	float: left
+	width: 100%
+	background: $BgContentGlobal
+	padding-bottom: 5em
+
+#header-wrapper
+	position: relative
+	float: left
+	width: 100%
+
+header
+	position: relative
+	float: left
+	width: 100%
+	height: $heightHeader
+	background: $bgHeader
+
+#footer-wrapper
+	position: relative
+	float: left
+	width: 100%
+
+footer
+	position: relative
+	float: left
+	width: 100%
+
+.container
+	width: $containerWidth+px
+	margin: 0 auto
+	position: relative
+
+.subcontainer 
+	width: (($containerWidth/$numCols))*$numColsSubcontainer+px
+	margin: 0 auto
+	position: relative
+
+
+
+//=======================================================================================================
+//02. GRID SYSTEM
+//=======================================================================================================
+
+
+@for $i from 1 through $numCols
+	.col#{$i}
+		width: (($containerWidth/$numCols))*$i+px
+		padding: 0 $medianil/2+px
+		float: left
+main, aside 
+	padding: 0 $medianil/2+px
+main
+	width: $mainWidth
+	float: left
+aside 
+	width: $asideWidth
+	float: $asideFloat
+
+// 2.2 = Escritorio 978
+//---------------------------------------------------------------
+
+
+@media only screen and (max-width: $containerWidth+px)
+
+   
+	// 2.2.1 = Grid System 
+	//---------------------------------------------------------------
+	
+	@for $i from 1 through $numCols
+		.col#{$i}
+			width: (($desktopBreakPoint/$numCols))*$i+px
+			padding: 0 $medianil/2+px
+			float: left
+
+	// 2.2.2 = Estrcutura
+	//---------------------------------------------------------------
+	
+	.container
+		width: $desktopBreakPoint+px
+		margin: 0 auto
+		position: relative
+
+
+
+
+//=======================================================================================================
+//03. HEADER
+//=======================================================================================================
+
+
+// 3.1 = Logo 
+//---------------------------------------------------------------
+
+@if $logoCenter == true
+	
+	.logo
+		position: absolute
+		left: 50%
+		margin-left: -$widthLogo/2
+		top: $logoTop
+		z-index: 1111
+		height: $heightLogo
+		width: $widthLogo
+
+@else
+	.logo
+		position: absolute
+		top: $logoTop
+		left: $logoLeft
+		z-index: 1111
+		height: $heightLogo
+		width: $widthLogo
+
+.icon-menu
+	display: none
+
+
+//3.2 = Nav 
+//---------------------------------------------------------------
+
+nav 
+	position: absolute
+	top: $topNav
+	left: $lefNav
+	right: $rightNav
+	bottom: $bottomNav
+	width: 100%
+	padding: $generalPaddingNav
+	background: $generalBgNav
+	z-index: 1000
+	border-top: solid 1px #f3f2f2
+	ul 
+		position: relative
+		text-align: $generalAlignNav
+		li 
+			display: inline-block
+			position: relative
+
+			&.current > span, &.current a
+				color: $colorNavCurrent
+				background: $bgNavCurrent
+				font-family: $fontFamilyNavCurrent
+			
+			&:hover > span
+				cursor: default	
+				color: $colorNavHover
+				background: $bgNavHover
+
+			&:hover > ul
+				display: block !important
+			
+			a, span 
+				color: $colorNav
+				background: $bgNav
+				padding: $paddingNav
+				font-family: $fontFamilyNav
+				font-weight: normal
+				cursor: pointer
+				font-size: $fontSizeNav
+				text-transform: $textTransformNav
+
+				&:hover, &.active
+					text-decoration: none
+					color: $colorNavHover
+					background: $bgNavHover
+					font-family: $fontFamilyNavHover
+				
+			
+
+			// 3.4 = Submenú
+			//--------------------------------------------------------------- 
+
+			ul 
+				position: absolute
+				width: $widthSecNav
+				text-align: $textAlignSecNav
+				background: $bgSecNav
+				padding: $generalPaddingSecNav
+				box-shadow: $boxShadowSecNav
+				top: $topSecNav
+
+				@if $SecNavCenter == true
+					left: 50%
+					margin-left: -$widthSecNav/2
+				@else
+					left: $leftSecNav
+				
+				li 
+					display: inline-block
+					position: relative
+					width: 100%
+					&:hover > ul
+
+						@if  $desplegado == true
+							display: block !important
+						@else
+							display: none !important
+
+					&.current
+						a 
+							background: #FFF 
+							text-decoration: none
+							color: $colorSecNavCurrent
+					a, span
+						color: $colorSecNav
+						padding: $paddingSecNav
+						font-family: $fontFamilySecNav
+						font-weight: normal
+						cursor: pointer
+						font-size: $fontSizeSecNav
+						background: $bgTextSecNav !important
+						text-transform: $textTransformSecNav
+						&:hover 
+							text-decoration: none
+							color: $colorSecNavHover
+					span
+						cursor: default !important
+
+					// 3.5 = TerNav (Solo Para tiendas)
+					//---------------------------------------------------------------
+
+					ul 
+						@if  $desplegado == true
+							display: block !important
+						@else
+							display: none !important
+						position: relative
+						text-align: $textAlignTerNav
+						background: $bgTerNav
+						padding: $generalPaddingTerNav
+						box-shadow: none
+						width: inherit
+						top: 0
+						
+						li 
+							display: inline-block
+							position: relative
+							width: 100%
+							&.current
+								a 
+									background: #FFF 
+									text-decoration: none
+									color: $colorTerNavCurrent
+							a, span
+								color: $colorTerNav
+								padding: $paddingTerNav
+								font-family: $fontFamilyTerNav
+								font-weight: normal
+								cursor: pointer
+								font-size: $fontSizeTerNav
+								background: $bgTextTerNav !important
+								text-transform: $textTransformTerNav
+								&:hover 
+									text-decoration: none
+									color: $colorTerNavHover
+								span
+									cursor: pointer !important
+							span
+								cursor: default !important
+
+// 3.4 = Language Nav
+//--------------------------------------------------------------- 
+
+#language-nav
+	position: absolute
+	top: $langTop
+	right: $langRight
+	bottom: $langBottom
+	left: $langLeft
+	z-index: 10	
+	width: $widthLang
+	font-family: $fontFamilyLang
+
+	ul
+		margin: 0
+		padding: 0	
+		display: inline-block
+		text-align: $alignLang
+		height: 24px
+		line-height: 24px
+
+		li
+			margin: 0
+			padding: $paddingLang
+			display: inline-block
+			font-size: $fontSizeLang
+			font-family: $fontFamilyLang
+
+			a
+				display: inline-block
+				color: $colorLang
+				background: $bgLang
+				padding: $paddingLang
+				font-weight: normal
+				cursor: pointer
+				font-size: $fontSizeNav
+				text-align: center
+				text-transform: $textTransformLang
+
+				&:hover
+					color: $colorLangHover
+					background: $bgLangHover
+
+			span, &.active a, &.active span
+				display: inline-block
+				color: $colorLangCurrent
+				background: $bgLangCurrent
+				padding: $paddingLang
+				font-weight: normal
+				cursor: pointer
+				font-size: $fontSizeNav
+				text-align: center
+
+
+
+// 3.5 = Social Nav
+//--------------------------------------------------------------- 
+
+// .social
+// 	position: absolute
+// 	top: $socialTop
+// 	right: $socialRight
+// 	bottom: $socialBottom
+// 	left: $socialLeft
+// 	z-index: 1
+// 	ul
+// 		float: right
+// 		margin: 0
+// 		padding: 0
+// 		text-align: right
+// 		li
+// 			display: inline-block
+// 			width: $withHeightSprite+px
+// 			height: $withHeightSprite+px
+// 			a
+// 				float: left
+// 				overflow: hidden
+// 				color: $colorSocial
+// 				text-indent: -1232323px
+// 				border-radius: 50%
+// 				&:hover
+// 					background-color: $colorSocialHover
+// 				span
+// 					display: none
+
+
+// Social Type
+
+.social
+	position: absolute
+	top: $socialTop
+	right: $socialRight
+	bottom: $socialBottom
+	left: $socialLeft
+	z-index: 1
+	ul.iconsocial
+		font-size: $iconsize
+		line-height: 1
+		li
+			width: $iconsize
+			height: $iconsize
+			margin-right: 5px
+			position: relative
+			font-family: 'iconsltw2'
+			text-align: left
+			z-index: 30
+			display: inline-block
+			a 
+				position: absolute
+				color: $coloriconsize
+				opacity: 0.6
+
+				&.facebook:before
+					content: '\e806' //línea
+
+				&.twitter:before
+					content: '\e805'
+				
+				&.instagram:before
+					content: '\e807'
+				
+				&.youtube:before
+					content: '\e808'
+				
+				&.googleplus:before
+					content: '\e809'
+
+				&.pinterest:before
+					content: '\e80a'
+
+				&.linkedin:before
+					content: '\e80c'
+
+				&.vimeo:before
+					content: '\e80b'   
+				
+				&:hover
+					opacity: 1
+
+
+// Social footer solo para movil 
+
+.socialFooter
+	display: none
+
+// 3.6 = Payment Options Footer
+//--------------------------------------------------------------- 
+
+ul.iconpayment
+	font-size: $iconsize
+	line-height: 1
+	li
+		width: $iconsize
+		height: $iconsize
+		margin-right: 5px
+		position: relative
+		font-family: 'iconsltw2'
+		text-align: left
+		display: inline-block
+		span 
+			position: absolute
+			color: #EEE
+			opacity: 0.6
+
+			&.paypal:before
+				content: '\e836' 
+
+			&.visa:before
+				content: '\e84b'
+			
+			&.mastercard:before
+				content: '\e84c'
+			
+			
+			&:hover
+				opacity: 1
+				
+//=======================================================================================================
+// 04. TEXTOS
+//======================================================================================================= 
+
+
+// 4.1 = Texts formats
+//---------------------------------------------------------------
+
+p
+	font-size: $fontSizeP 
+#content p
+	margin-bottom: $marginBottomTextGlobal
+
+blockquote
+	line-height: 1.3em
+	font-size: $fontSizeBq
+
+	&:before
+		content: "'"
+	&:after
+		content: "'"
+
+#content blockquote
+	margin-bottom: $marginBottomTextGlobal
+
+strong
+	font-family: $fontWeightStrong
+	font-weight: normal
+
+cite
+	color: #CCCCCC 
+em
+	font-size: $fontSizeEm
+
+
+
+
+// 4.2 = H's 
+//--------------------------------------------------------------- 
+
+h1,h2,h3
+	line-height: 1.2em
+	font-weight: normal
+	width: 100%
+	float: left
+
+h1
+	font-size: $fontH1Size
+	font-family: $fontH1Family
+	text-align: $fontH1Align
+	margin: $fontH1Margin
+	color: $fontH1Color
+	text-transform: $textTransformH1
+	background: $fontH1Bg
+	padding: $fontH1Padding
+
+h2
+	font-size: $fontH2Size
+	font-family: $fontH2Family
+	text-align: $fontH2Align
+	margin: $fontH2Margin
+	color: $fontH2Color
+	text-transform: $textTransformH2
+	background: $fontH2Bg
+	padding: $fontH2Padding
+
+h3
+	font-size: $fontH3Size
+	font-family: $fontH3Family
+	text-align: $fontH3Align
+	margin: $fontH3Margin
+	color: $fontH3Color
+	text-transform: $textTransformH3
+	background: $fontH3Bg
+	padding: $fontH3Padding
+
+
+
+// 4.3 = Links
+//------------------------------------------------------------- 
+
+a
+	font-size: $fontSizeLinks
+	text-decoration: none
+	color: $colorLinks
+	cursor: pointer
+
+	&:hover
+		color: $colorLinksHover
+
+
+//=======================================================================================================
+// 05. LISTS
+//======================================================================================================= 
+
+
+ul
+	list-style-type: none 
+	padding: 0px 
+	margin: 0px
+	li
+		list-style-type: none
+#content 
+	li
+		margin-bottom: $marginBottomTextGlobal
+		padding-left: 24px
+		position: relative
+
+		&:before
+			font-family: 'iconsltw2'
+			content: '\e832'
+			color: #e67a1e
+			position: absolute
+			left: 10px
+			margin: 0
+			top: 0
+			font-size: 7px
+			
+ol
+	list-style-type: none 
+	padding: 0px 
+	margin: 0px
+	li
+		list-style-type: none
+
+iframe
+
+	margin: 0 !important
+	padding: 0 !important
+	
+
+
+
+//5.1 Listado dinámico tipo (noticias, productos, tec)
+//------------------------------------------------------------- 
+
+@if $typeList == 1
+
+
+	.dynamic-list
+		float: left
+		width: 100%
+		margin: 0 0 1em
+		ul
+			float: left
+			width: 100%
+			margin: 0
+			padding: 0
+
+			li
+				float: left
+				list-style: none
+				margin: 0 0 1.5em
+				background: none
+				line-height: 1.5em
+
+				.foto
+					float: left
+					width: 35%
+					margin: 0
+					img
+						float: left
+						margin: 3px 15px 15px 0
+						max-width: 100%
+
+				.textintro
+					float: right
+					width: 65%
+					padding: 0 0 0 1em
+					.date
+						color: $fontH2Color
+					h2
+						a
+							color: $fontH2Color
+
+
+@if $typeList == 2
+
+	.dynamic-list
+		float: left
+		width: 100%
+		margin: 0 0 1em
+		ul
+			float: left
+			width: 100%
+			margin: 0
+			padding: 0
+
+			li
+				float: left
+				list-style: none
+				margin: 0 0 1.5em
+				background: none
+				line-height: 1.5em
+
+				.foto
+					float: left
+					margin: 0
+					width: 100%
+					text-align: center
+					img
+						float: none
+						margin: 3px 0 1.2em
+						width: 100%
+						height: auto
+
+				.textintro
+					float: left
+					clear: left
+					width: 100%
+					.date
+						color: $fontH2Color
+					h2
+						a
+							color: $fontH2Color
+
+
+//5.2 Paginación listado dinámico
+//------------------------------------------------------------- 
+
+.paginacion
+	float: left
+	width: 100%
+	margin: 0
+	padding: 5px 0 0
+	text-align: right
+	span, a
+		display: inline-block
+		width: 24px
+		height: 24px
+		text-align: center
+		color: #666
+		line-height: 24px
+	.prev, .next
+		float: none
+		padding: 5px
+		line-height: 24px
+		color: #666
+		cursor: pointer
+	.prev:hover, .next:hover
+		color: #000
+	.current, .numHIGH
+		display: inline-block
+		line-height: 24px
+		height: 24px
+		width: 24px
+		text-decoration: underline
+
+
+//=======================================================================================================
+// 06. FORMS
+//======================================================================================================= 
+
+
+// 6.1 = Labels
+//------------------------------------------------------------- 
+
+label
+	font-size: $fontSizeLabels
+	font-family: $fontFamilyLabels
+	color: $labelsColors
+	clear: both
+	margin: $marginLabels
+	float: left
+	width: 100%
+	position: relative
+
+
+// 6.2 = Inputs + Textarea
+//--------------------------------------------------------------- 
+
+
+input, textarea, select
+	width: 100%
+	font-size: $fontSizeInputs
+	font-family: $fontFamilyInputs
+	color: $imputsColors
+	border: $inputsborders
+	padding: $paddingInputs
+	margin: $marginInputs
+	border-radius: $bradiusInputs
+	font-family: $fontFamilyInputs
+	resize: none
+	appearance: none	
+	-webkit-appearance: none
+	-moz-appearance: none	
+
+
+/* Radio buttons & check buttons */
+
+input[type="radio"], input[type="checkbox"]
+	display: none
+
+input[type="radio"] + label span, input[type="checkbox"] + label span
+	position: relative
+	width: 20px
+	height: 20px
+	background: url('../images/icons/check20.png') no-repeat 1px 0px
+	cursor: pointer
+	margin: 2px 10px 0 0 
+	top: 0px
+	float: left
+input[type="radio"]:checked + label span, input[type="checkbox"]:checked + label span
+	background-position: -20px 0px
+
+input[type="range"]
+	border: none
+	position: relative
+	background: none
+	z-index: 0
+	&::after
+		content: ''
+		position: absolute
+		z-index: -1
+		top: 50%
+		left: 0
+		height: 1px
+		width: 100%
+		border: $inputsborders	
+		border-left: 0
+		border-right: 0
+		border-bottom: 0
+
+/* submit Inputs */
+
+input[type="submit"]
+	cursor: pointer
+
+textarea
+	min-height: 100px
+
+// 6.3 = Selects
+//--------------------------------------------------------------- 
+
+select
+	background: #f5f5f5 url('../images/icons/downarrow16.png') no-repeat 96% 50%
+	cursor: pointer
+
+// 6.4 = Inputs in Forms
+//---------------------------------------------------------------
+
+form
+	li
+		width: $liFormWidth
+		padding: $liFormPadding
+		float: left
+		margin-bottom: $marginBottomInputs !important	
+
+		&.full
+			width: 100%
+			padding: $liFormPadding
+
+		ul.checklist, ul.radiolist
+			padding: 1em 0
+			float: left
+			li
+				width: 100%
+
+
+// 6.5 = Errores
+//--------------------------------------------------------------- 
+#errores
+	float: left
+	width: 100%
+	color: #cc0000
+	margin: 20px 0
+	padding: 15px
+	background: #ffdddd
+	display: none
+
+//=======================================================================================================
+// 07. TABLES
+//======================================================================================================= 
+
+table
+	border-collapse: collapse
+	width: 100%
+	background: #FFF
+	padding: 20px 
+	margin-bottom: $marginBottomTextGlobal*2
+	text-align: $textAlignTable
+
+
+
+th,td
+	border: $borderTable
+	padding: $paddingTable
+
+//=======================================================================================================
+// 08. BUTTONS
+//======================================================================================================= 
+
+.button
+	display: inline-block
+	font-size: $fontSizeBtn
+	font-family: $fontFamilyBtn
+	padding: $paddingBtn
+	border-radius: $borderRadiusBtn
+	border: $borderBtn
+	cursor: pointer
+	text-align: center
+	text-transform: $textTransformBtn
+	margin: 0
+	-webkit-appearance: none
+
+
+//8.1 = Tamaños botones
+//--------------------------------------------------------------- 
+
+.smallest
+	width: $btnVerySmall
+.small
+	width: $btnSmall
+.medium
+	width: $btnMedium	
+.large
+	width: $btnLarge
+.extralarge
+	width: $btnXl
+.fullButton
+	width: 100%
+
+//8.2 = Tipos botones
+//--------------------------------------------------------------- 
+
+
+.link
+	background: $linkBgBtn
+	color: $linkColorBtn
+	&:hover
+		background: $linkBgBtnHover
+		color: $linkColorBtnHover
+.default
+	background: $defBgBtn
+	color: $defColorBtn
+	&:hover
+		background: $defBgBtnHover
+		color: $defColorBtnHover
+.submit
+	background: $submitBgBtn
+	color: $submitColorBtn
+	&:hover
+		background: $submitBgBtnHover
+		color: $submitColorBtnHover
+.alert
+	background: $alertBgBtn
+	color: $alertColorBtn
+	&:hover
+		background: $alertBgBtnHover
+		color: $alertColorBtnHover
+.new
+	background: $newBgBtn
+	color: $newColorBtn
+	&:hover
+		background: $newBgBtnHover
+		color: $newColorBtnHover
+
+// Para tiendas
+
+.agotado
+	background: $agotadoBgBtn
+	color: $agotadoColorBtn
+	cursor: default !important	
+	&:hover
+		background: $agotadoBgBtnHover
+		color: $agotadoColorBtnHover
+		cursor: default !important	
+
+
+//=======================================================================================================
+// 09. FOOTER
+//======================================================================================================= 
+
+footer
+	padding: $paddingFooter
+	color: $colorFooter
+	h3
+		font-size: $footerH3Size
+		color: $footerH3Color
+		margin-bottom: 1em
+		text-transform: $footerH3TextTransform
+		font-family: $footerH3FontFamily
+	ul
+		text-align: left
+		&.contact-list, &.credit-list
+			display: block
+			li
+				display: block
+	li 
+		display: inline-block
+		width: 100%
+
+	a
+		color: $colorFooter
+		padding: $paddingTextFooter
+
+		&:hover
+			color: $colorFooterHover
+		&.active
+			color: $colorFooterActive
+	
+
+//=======================================================================================================
+// 10. COOKIES
+//======================================================================================================= 
+
+#cookies_msg_subwrapper
+	position: fixed
+	bottom: 0
+	width: 100%
+	z-index: 100
+	line-height: 1.9em
+	padding: 1em 0
+	text-align: center
+	font-size: .9em
+	letter-spacing: .03em
+	border-top: solid 1px #666
+	background: #232323
+	color: #DDD
+	span, a
+		display: inline-block
+		padding: 5px 8px
+		margin: 0 0 0 2px
+		cursor: pointer
+		white-space: nowrap
+		border-radius: 3px
+		background: #111
+		color: #CCC
+		border-bottom: 1px solid #000
+	span:hover, a:hover
+		background: #111
+		color: #CCC
+		border-bottom: 1px solid #000

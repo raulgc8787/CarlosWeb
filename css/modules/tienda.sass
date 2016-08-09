@@ -1,0 +1,974 @@
+
+//Name: tienda.sass
+//Author: Latevaweb S.L.
+//Version: 1.0.0
+
+//-
+
+
+//0.T Tabla de contenidos
+//========================
+
+	//00. CLASES GENERALES (first, last, ...)
+	//---------------------------------------------------
+
+	//01. CARRITO
+	//---------------------------------------------------
+
+	//02. LOGIN
+	//---------------------------------------------------
+
+	//03. SEARCH
+	//---------------------------------------------------
+
+	//04. COMPRA (todo el proceso y el histórico)
+	//---------------------------------------------------
+		// 4.1 = Bullets checkout
+	
+	
+
+
+
+///======================================================================================================
+//00. CLASES GENERALES
+//=======================================================================================================
+
+.header-subtitle
+	background: $headerSubBg
+	width: 100%
+	float: left
+	margin:  $headerSubMargin
+	padding: $headerSubPadding
+	a
+		color: $headerSubColor
+		font-family: $headerSubFontFamily
+		font-size: $headerSubFontSize
+		text-transform: $headerSubTextTransform
+
+		&:hover
+			color: $headerSubColorHover
+
+
+#paging
+	margin: 5em 0 3em
+	text-align: center
+
+// Mensajes
+
+.message
+	width: 100%
+	position: relative
+	padding: 1em
+	text-align: center
+	float: left
+
+#content-error, #content-error-coupon, #content-error-email
+	@extend .message
+	background: #ffe9e9
+	color: #fc4273
+	a
+		color: #fc4273
+#content-info
+	@extend .message
+	background: #e6f6ff
+#content-warning
+	@extend .message
+	background: #ffe9e9
+#content-success
+	@extend .message
+	background: #c7ffd0
+
+
+///======================================================================================================
+//01. CARRITO
+//=======================================================================================================
+
+.ajax_cart_button
+	position: absolute
+	top: $cartTop
+	left: $cartLeft
+	right: $cartRight
+	bottom: $cartBottom
+	width: $cartWidth
+	a, a:visited, a:hover
+		text-decoration: none
+	.content_quantity
+		float: left
+		position: relative
+		top: 6px
+		.quantity
+			color: $quantityColor
+			text-align: left
+			display: inline
+			font-size: $quantityFontSize
+			font-family: $quantityFontFamily
+			padding: $quantityPadding
+
+		.text
+			color: $textCartColor
+			font-size: $textCartFontSize
+			font-family: $textCartFontFamily
+
+	.iconcart
+		//background: url(../images/icons/cartlow.png) no-repeat
+		display: inline-block
+		float: left
+		height: 32px
+		margin-top: 0
+		position: relative
+		width: 42px
+		padding: 0
+		margin-right: 6px
+
+		// position: absolute
+		// top: 5px
+		// left: 3px
+		// width: 32px
+		// height: 32px
+		font-family: 'iconsltw2'
+		font-size: 35px
+		&:before
+			content: '\e80e' 
+			color: $colorLinks
+	&:hover .iconcart:before
+		content: '\e80e' 
+		color: $colorLinksHover
+
+
+	// 1.1 = Cart detail
+	//---------------------------------------------------------------
+
+	.cart-detail
+		display: none
+		position: absolute
+		width: $cartDetailWidth
+		left: 50%
+		margin-left: -$cartDetailWidth/2
+		display: none
+		z-index: 10000  
+		background: $cartDeatilBg
+		top: $cartDeatilTop
+		border-bottom: $cartBorder
+
+		#content_products
+			width: 100%
+			position: relative
+			float: left
+			padding: $cartDeatilPadding
+			.fila
+				float: left
+				width: 100%
+				padding: 1em 0
+				border-bottom: $cartDeatilBorder
+				.attributtes
+					width: 100%
+					float: left
+				.fila-left, .fila-right
+					float: left
+					width: 100%
+					position: relative
+					float: left
+					.name
+						padding-right: 20px
+				.fila-right
+					text-align: right
+				.delete
+					position: absolute
+					top: 0
+					right: 0
+					cursor: pointer
+			#content_total
+				padding: 1em 0
+				text-align: right
+				float: left
+				position: relative
+				width: 100%
+				strong
+					font-family: $TotalDetailFontFamily
+					color: $TotalDetailColor
+					font-size: $TotalDetailFontSize
+
+			.content_button
+				width: 100%
+				position: relative
+				float: left
+
+#ajax_cart
+	position: relative
+	float: left
+				
+
+// 1.2 = Cart Table (Antes de efectuar compra)
+//---------------------------------------------------------------
+
+#shopping-cart
+	table tr
+		border-bottom: $cartTableBorder
+		.foto
+			width: 85px
+			height: auto
+		.casulePlusMius
+			display: inline-block
+			min-width: 150px
+			.button_plus, .button_minus
+				
+				width: $cartTablePlusminusWidthHeight
+				height: $cartTablePlusminusWidthHeight
+				position: relative
+				padding: $cartTablePlusminusPadding
+				border-radius: $borderRadiusPlus
+				vertical-align: middle
+			
+			.button_minus
+				background: $cartTableMinusBg
+				border-radius: $borderRadiusMinus
+				&:hover
+					background-color: $cartTableMinusBgHover
+
+			.button_plus
+				background: $cartTablePlusBg
+				&:hover
+					background-color: $cartTableMinusBgHover
+			.quantity
+				width: 45px
+				display: inline-block
+				vertical-align: middle
+				input
+					float: left
+					border-radius: 0
+					margin: 0
+		.subtotal
+			background: $cartTableTotalBg
+			border: none
+			color: $cartTableTotalColor
+			font-family: $cartTableTotalFontFamily
+			font-size: $cartTableTotalFontSize
+		
+// 1.3 = Estilos de la transición del botón de compra - carrito
+//---------------------------------------------------------------
+
+.ui-effects-transfer
+	border: 2px solid
+	border-color: rgba(0, 0, 0, 0.15)
+	background-color: rgba(0, 0, 0, 0.15)
+	z-index: 99999
+
+///======================================================================================================
+//02. LOGIN
+//=======================================================================================================
+
+.login
+	position: absolute
+	top: $loginTop
+	left: $loginLeft
+	right: $loginRight
+	bottom: $loginBottom
+	width: $loginWidth
+	text-align: right
+	a
+		font-size: $loginFontSize
+		color: $loginColor
+		padding: $loginPadding
+		display: inline-block
+		&:hover
+			color: $loginColorHover
+
+.loginCont
+	.login-center, .login-right
+		float: left
+		position: relative
+		width: 100%
+
+.login-left
+	.half
+		padding: 0 1.2em
+	.forgot
+		margin-top: 15px 
+
+
+///======================================================================================================
+//03. SEARCH
+//=======================================================================================================
+
+.search
+	position: absolute
+	top: $searchTop
+	left: $searchLeft
+	right: $searchRight
+	bottom: $searchBottom
+	width: $searchWidth
+	z-index: 10000
+	.searchicon
+		position: absolute
+		top: 5px
+		left: 3px
+		font-family: 'iconsltw2'
+		width: 32px
+		height: 32px
+		font-size: 32px
+		&:before
+			content: '\e80d' 
+			color: $searchTextColor
+
+
+	input[type="text"]
+		padding: $searchPadding
+		border: $searchBorder
+		text-transform: $searchTextTransform
+		color: $searchTextColor
+		margin-bottom: 0
+		position: relative
+		
+
+	.btn
+		position: absolute
+		opacity: 0
+		width: 32px
+		height: 32px
+		margin: 0
+		top: 0
+
+
+		@if $endBegin == 'end'
+			
+			right: 0
+			
+		@else
+
+			left: 0
+	#autocomplete
+		display: none
+		float: left
+		position: relative
+		width: 100%
+		height: auto
+		max-height: 200px
+		overflow-x: hidden
+		z-index: 999
+		
+		li
+			background: $autocompleteBg
+			color: $autocompleteColor
+			width: 100%
+			padding: $autocompletePadding
+			cursor: pointer
+			&:hover
+				color: $autocompleteColorHover
+				background: $autocompleteBgHover
+
+///======================================================================================================
+//04. COMPRA (todo el proceso y el histórico)
+//=======================================================================================================
+
+
+.products
+	clear: both
+	padding-bottom: 15px
+	table
+		width: 100%
+		th
+			padding: 10px 0
+			border-bottom: $checkoutBorderBottomTable
+		td
+			padding: 10px 5px 10px 5px
+			border-bottom: $checkoutBorderBottomTable
+.totals
+	clear: both
+	padding-bottom: 15px
+	float: right
+	width: 100%
+	table
+		background-color: #f5f5f5
+		td
+			padding: 10px
+			border-bottom: $checkoutBorderBottomTable
+.status
+	clear: both
+	padding-bottom: 15px
+	table
+		width: 100%
+		th
+			padding: 10px 0
+			border-bottom: $checkoutBorderBottomTable
+		td
+			padding: 10px 10px 10px 0
+			border-bottom: $checkoutBorderBottomTable
+
+.billinAdressCont
+	position: absolute
+	width: 160px
+	right: 0
+	p
+		width: 110px
+		float: left
+		position: relative
+#shipping_method
+	float: left
+	width: 100%
+	margin-bottom: 0
+	table
+		margin-bottom: 0
+#payment_method
+	float: left
+	width: 100%
+	margin-bottom: 0
+	table
+		margin-bottom: 0
+#discount_coupon
+	float: left
+	width: 100%
+	margin-bottom: 0
+	table
+		margin-bottom: 0		
+.checkout
+	text-align: left
+	width: 100%
+	th
+		padding: 10px 0
+		border-bottom: $checkoutBorderBottomTable
+	td
+		padding: 10px 10px 10px 20px
+		border-bottom: $checkoutBorderBottomTable
+	
+	.moduleRow 
+		cursor: pointer
+		background: $checkoutBgRadioButtons
+	.moduleRowOver
+		cursor: pointer
+		background: $checkoutBgRadioButtonsHover
+	.moduleRowSelected
+		cursor: pointer
+		background: $checkoutBgRadioButtonsActive
+	.moduleRow td:first-child
+		background: $checkoutBgRadioButtons url('../images/icons/moduleRowInactive25.svg') no-repeat 5px 50%       
+	.moduleRowOver td:first-child
+		background: $checkoutBgRadioButtonsHover url('../images/icons/moduleRowInactive25.svg') no-repeat 5px 50%
+	.moduleRowSelected td:first-child
+		background: $checkoutBgRadioButtonsActive url('../images/icons/moduleRowActive25.svg') no-repeat 5px 50%
+
+label[for="agreement"]
+	padding: 0 0 4em
+
+
+// 4.1 = Bullets checkout
+//--------------------------------------------------------------- 
+
+#checkout_nav
+	float: left
+	bottom: 0
+	left: 0
+	margin: 0 0 60px
+	width: 100%
+	clear: both
+	margin-top: 70px
+	ul
+		float: left
+		width: 100%
+		margin: 0 auto
+		padding: 0
+		list-style: none!important
+		li,li a,li a:visited
+			float: left
+			position: relative
+			margin: 0
+			padding: 15px 0 0
+			width: 25%
+			height: 35px
+			text-align: center
+			text-decoration: none
+			color: #364033
+			font-size: 1em
+			height: 35px
+			line-height: 50px
+
+		li a, li a:visited, li .colored
+			color: #000
+			width: 100%
+		li a:hover, li a:visited:hover
+			text-decoration: none
+			width: 100%
+		li .active, li a.active
+			font-family: 'lt',Arial,Helvetica,sans-serif
+			font-size: 1.25em
+			color: #000
+			width: 100%
+
+	.bullet_nav
+		border-radius: 50%
+		position: absolute
+
+		.line_first, .line_last
+			background: #ccc
+			width: 50%
+			height: 2px!important
+			position: relative
+			float: left
+
+	.active_nav
+		background: $checkoutBulletsBgActive
+		width: 20px
+		height: 20px
+		top: 6px
+		z-index: 99
+		left: 50%
+		margin-left: -10px
+
+	.prev_nav
+		background: $checkoutBulletsBgPrepass
+		width: 10px
+		height: 10px
+		border: solid 2px #ccc
+		top: 9px
+		left: 50%
+		margin-left: -6px
+		z-index: 99
+
+	.pass_nav
+		background: $checkoutBulletsBgPass
+		width: 12px
+		height: 12px
+		top: 10px
+		left: 50%
+		margin-left: -6px
+		z-index: 99
+
+	.pass_line
+		background: #3ecbbf!important
+
+	.first_active .line_first,.first_standard_pass .line_first
+		background: none
+
+	.last_standard .line_last,.last_active .line_last
+		background: none
+
+h2 a
+	font-size: .7em
+	text-transform: lowercase
+
+
+///======================================================================================================
+//05. PRODUCT LISTS (Listado de productos)
+//=======================================================================================================
+
+#content
+	.product-listing
+		text-align: center
+		li
+			width: $listWidth
+			height: $listHeight
+			display: inline-block
+			margin: $listMargin
+			padding: 0
+			position: relative
+			&:before
+				content: ''
+
+			.img-container
+				margin-bottom: 1em
+				float: left 
+				position: relative
+			h3
+				color: $listH3Color
+				font-family: $listH3FontFamily
+				font-size: $listH3FontSize
+				text-transform: $listH3TextTransform
+				float: left
+				width: 100%
+				text-align: $listH3TextAlign
+				margin: $listH3Margin
+			.description-container
+				color: $listDescriptColor
+				text-align: left
+				width: 100%
+				float: left
+				margin-bottom: 1em
+			.price-container
+				text-align: $listPriceAlign
+				font-family: $listPriceFontFamily
+				font-size: $listPriceFontSize
+				position: absolute
+				bottom: $listPriceBottom
+				s
+					font-size: $priceOfertaSize
+					font-family: $priceOfertaFamily
+					color: $priceOfertaColor
+				a
+					color: $listPriceColor
+					&:hover
+						color: $listH3ColorHover
+			.product-quantity-pack
+				float: left
+				margin-bottom: 1em
+				width: 100%
+				text-align: $quantityPackAlign
+				color: $quantityPackColor
+			.button
+				position: absolute
+				bottom: 0
+				display: inline-block
+				left: $listButtonLeft
+
+///======================================================================================================
+//06. PRODUCT INFO (Información del producto)
+//=======================================================================================================
+
+
+.prevNext
+	position: absolute
+	right: 0
+	top: 94px
+	.previous
+		float: left
+		position: relative
+		margin: 0 1em 0 0
+		&:before
+			content: url(../images/icons/prev.png)
+			position: relative
+			top: 3px
+	.next
+		float: right
+		position: relative
+		&:after
+			content: url(../images/icons/next.png)
+			position: relative
+			top: 3px
+
+.containerImage
+	width: $productImageContainerWidth
+	padding: $productImageContainerPadding
+	float: left
+	.firstImage
+		width: 100%
+		position: relative
+		img
+			width: 100%
+			height: auto
+	.fotvideosContent
+		text-align: $productThumbsAlign
+		li
+			//width: $productImageThumbsWidth
+			display: inline-block
+			margin-bottom: 0 !important
+			img
+				width: 100%
+				height: $productImageThumbsHeight
+
+.infoProduct
+	width: $productInfoContainerWidth
+	padding: 0
+	float: left
+	
+	h1
+		font-size: $productH1Size
+		font-family: $productH1Family
+		text-align: $productH1Align
+		margin: $productH1Margin
+		color: $productH1Color
+		text-transform: $textTransformProductH1
+		background: $productH1Bg
+		padding: $productH1Padding
+
+	.description
+		position: relative
+		background: $productInfoContainerBg
+		padding: $productInfoContainerPadding
+		float: left
+		width: 100%
+
+		.attributes
+			background: none
+			float: left
+			position: relative
+			width: 100%
+			text-align: left
+			padding: 0
+
+			li
+				float: left
+				position: relative
+				padding: 10px
+				cursor: pointer
+				margin: 5px
+				text-align: center
+
+				&.active, &:hover
+					outline: solid 3px $colorLinks
+				p
+					margin-bottom: 0 !important
+
+			.atrrSelect
+				width: 100%
+				float: left
+				position: relative
+				select
+					background: $attributesBg
+					padding: $attributesPadding
+					border: $attributesBorder
+					width: $attributesWidth
+
+		.textProduct
+			margin: $producttextProductMargin
+			float: left
+			width: 100%
+			color: $producttextProductColor
+		.contentPrice
+			float: left
+			position: relative
+			width: 100%
+			h3
+				font-size: $priceProductH3Size
+				font-family: $priceProductH3Family
+				text-align: $priceProductH3Align
+				margin: $priceProductH3Margin
+				color: $priceProductH3Color
+				text-transform: $priceTextTransformProductH3
+				background: $priceProductH3Bg
+				padding: $priceProductH3Padding
+				s
+					font-size: $priceOfertaSize
+					font-family: $priceOfertaFamily
+					color: $priceOfertaColor
+
+		.products_quantity_pack
+			width: 50%
+			position: relative
+			float: left
+			margin: 0 0 1em
+
+		.infoProductId, .product-social
+			width: 50%
+			position: relative
+			float: left
+			margin: 15px 0
+			#news-social
+				float: right
+
+#thumb_container
+	position: absolute
+	margin: 0
+	padding: 0
+	float: left
+	width: 150px
+	height: 150px
+	border: solid 3px $colorLinks
+	display: none
+	img
+		width: 100%
+		height: 100%
+
+///======================================================================================================
+//07. MANUFACTURERS LISTS (Listado de productos)
+//=======================================================================================================
+
+.manufacturers-listing
+	width: 100%
+	position: relative
+	float: left
+	ul
+		text-align: center
+		position: relative
+		float: left
+		width: 100%
+		li
+			width: $listManufacturersWidth
+			height: $listmanufacturersHeight
+			display: inline-block
+			position: relative
+			margin: $listMargin
+			h2
+				font-family: $manufacturersH2FontFamily
+				font-size: $manufacturersH2FontSize
+				text-transform: $manufacturersH2TextTransform
+				text-align: $manufacturersH2Align
+				width: 100%
+
+///======================================================================================================
+//08. ACCOUNT (Mi cuenta)
+//=======================================================================================================
+
+.adresses
+	ul
+		li
+			.right
+				float: right
+				a
+					margin: 0 5px
+
+			&:nth-child(2n)
+				background: #f5f5f5
+
+#account
+	li
+		width: 100%
+		float: left
+
+.orders-list
+	li
+		float: left
+		position: relative
+		width: 100%
+		&:hover
+			background: #f5f5f5 !important
+		span
+			width: 33.3%
+			float: left
+			position: relative
+			text-align: center
+			border-bottom: $checkoutBorderBottomTable
+			padding: 1.3em 0
+			strong
+				font-family: $fontFamilyGlobal
+				font-size: 1.3em
+				color: $colorGlobal
+				font-weight: normal
+
+///======================================================================================================
+//09. NEWS LIST
+//=======================================================================================================
+
+#news-container-left
+	img
+		width: 100%
+		height: auto
+
+///======================================================================================================
+//10. NOVEDADES, 11. OFERTAS, 12. OFERTAS ESPECIALS
+//=======================================================================================================
+
+.img-container, #img-container
+	position: relative
+
+///======================================================================================================
+//10. NOVEDADES
+//=======================================================================================================
+
+.productsnew, .productsnew *
+	box-sizing: border-box
+.productsnew
+	position: absolute
+	left: 25px
+	bottom: 25px
+	display: block
+	width: 100px
+	height: 100px
+	padding: 15px 10px 15px 10px
+	background: $newBg
+	opacity: .85
+	border-radius: 50%
+	-ms-transform: rotate(-10deg)
+	-webkit-transform: rotate(-10deg) 
+	transform: rotate(-10deg)
+.innerproductsnew
+	float: left
+	width: 90%
+	margin: 0 5%
+	text-align: center
+	font-size: 1.2em
+	padding-top: 20px
+	color: $newTxt
+
+#img-container .productsnew
+	width: 150px
+	height: 150px
+	padding: 15px 10px 15px 10px
+
+#img-container .innerproductsnew
+	width: 90%
+	margin: 0 5%
+	font-size: 1.75em
+	padding-top: 40px
+
+///======================================================================================================
+//11. OFERTAS
+//=======================================================================================================
+
+.offer, .offer *
+	box-sizing: border-box
+.offer
+	position: absolute
+	left: 25px
+	bottom: 25px
+	display: block
+	width: 100px
+	height: 100px
+	padding: 15px 10px 15px 10px
+	background: $offerBg
+	opacity: .85
+	border-radius: 50%
+	-ms-transform: rotate(-10deg)
+	-webkit-transform: rotate(-10deg) 
+	transform: rotate(-10deg)
+.inneroffer
+	float: left
+	width: 90%
+	margin: 0 5%
+	text-align: center
+	font-size: 1.2em
+	padding-top: 20px
+	color: $offerTxt
+
+#img-container .offer
+	width: 150px
+	height: 150px
+	padding: 15px 10px 15px 10px
+
+#img-container .inneroffer
+	width: 90%
+	margin: 0 5%
+	font-size: 1.75em
+	padding-top: 40px
+
+///======================================================================================================
+//12. OFERTAS ESPECIALS
+//=======================================================================================================
+
+.oferta, .oferta .name, .oferta .precio, .oferta .attributtes
+	color: #dd0000
+.specialoffer, .specialoffer *
+	box-sizing: border-box
+.specialoffer
+	position: absolute
+	left: 25px
+	bottom: 25px
+	display: block
+	width: 100px
+	height: 100px
+	padding: 15px 10px 15px 10px
+	background: $specialofferBg
+	opacity: .85
+	border-radius: 50%
+	-ms-transform: rotate(-10deg)
+	-webkit-transform: rotate(-10deg) 
+	transform: rotate(-10deg)
+.nunidxdesc
+	padding-top: 10px!important
+.nunidxnunid
+	padding-top: 20px!important
+.innerspecialoffer
+	float: left
+	width: 90%
+	margin: 0 5%
+	text-align: center
+	font-size: 1em
+	color: $specialofferTxt
+.bignumber
+	font-size: 1.5em
+.nunidxnunid .bignumber
+	font-size: 2em
+#img-container .specialoffer
+	width: 150px
+	height: 150px
+	padding: 15px 10px 15px 10px
+#img-container .innerspecialoffer
+	width: 90%
+	margin: 0 5%
+	font-size: 1.5em
+#img-container .bignumber
+	font-size: 1.75em
+	line-height: 1em
+#img-container .nunidxnunid .bignumber
+	font-size: 2em
+#img-container .nunidxdesc
+	padding-top: 15px!important
+#img-container .nunidxnunid
+	padding-top: 30px!important
