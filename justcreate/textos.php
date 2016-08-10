@@ -362,9 +362,9 @@ $(document).ready(function(){
 		}
 		
 		
-		echo '<tr><td class="txt_key"><a name="row'.$textos['id'].'">'.$textos['text_nodisabled'].'</a> <a href="?key='.$_GET['key'].'&delete='.$textos['id'].'" onclick="return confirm(\''.$backoffice['alerta_borrar'][$_SESSION['bo_idioma']].'\')" class="delete">'.$backoffice['borrar'][$_SESSION['bo_idioma']].'</a>';
+		echo '<tr style="padding-top: 20px; border-top: 1px dotted #ccc; margin-top: 50px;"><td class="txt_key" ><a name="row'.$textos['id'].'">'.$textos['text_nodisabled'].'</a> <a href="?key='.$_GET['key'].'&delete='.$textos['id'].'" onclick="return confirm(\''.$backoffice['alerta_borrar'][$_SESSION['bo_idioma']].'\')" class="delete">'.$backoffice['borrar'][$_SESSION['bo_idioma']].'</a>';
 		if($_GET['key'] != 'url'){
-			echo '<br /><span><input type="checkbox" name="check'.$textos['id'].'" id="check'.$textos['id'].'" value="1" '.$checked.' onclick="textiny('.$textos['id'].')"> '.$backoffice['texto_enriquecido'][$_SESSION['bo_idioma']].'</span>';
+			echo '<br /><span><input type="checkbox" name="check'.$textos['id'].'" id="check'.$textos['id'].'" value="1" '.$checked.' onclick="textiny('.$textos['id'].')" > '.$backoffice['texto_enriquecido'][$_SESSION['bo_idioma']].'</span>';
 		}
 		echo '</td><td width="58%">';
 
@@ -393,13 +393,13 @@ $(document).ready(function(){
 	//Solo nosotros podemos crear claves
 	if($_SESSION['rol'] == 0){
 	?>
-    <tr class="nuevoRegistro">
-    <td valign="top">
+    <tr class="tbJustcreate">
+    <td valign="top" style="border-top: 0; padding-top: 30px;">
     	<input type="text" name="newkey" id="newkey" value="<?php echo $value;?>" style="width:250px;" />
-        <br /><br  /><span><input type="checkbox" name="check0" id="check0" value="1" onClick="textiny(0)" style="float:left;"><?php echo $backoffice['texto_enriquecido'][$_SESSION['bo_idioma']];?></span>
+        <br /><br  /><!-- <span><input class="none" type="checkbox" name="check0" id="check0" value="1" onClick="textiny(0)" style="float:left;"><?php echo $backoffice['texto_enriquecido'][$_SESSION['bo_idioma']];?></span> -->
         <br /><div id="keyerrors"></div>
     </td>
-    <td>
+    <td class="none">
     <?php
 	$i = db_query($link,"SELECT * FROM config_idiomes ORDER BY id_idioma ASC");
 	while($idiomes = mysqli_fetch_array($i)){
@@ -407,7 +407,7 @@ $(document).ready(function(){
 	}
 	?>
     </td>
-    <td valign="top"><input type="button" class="addkey" value="<?php echo $backoffice['crear_registro'][$_SESSION['bo_idioma']];?>" onClick="checkKey();" /></td>
+    <td valign="top" style="border-top: 0;"><input type="button" class="addkey" value="<?php echo $backoffice['crear_registro'][$_SESSION['bo_idioma']];?>" onClick="checkKey();" /></td>
     </tr>
     <?php
 	}

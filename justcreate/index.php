@@ -17,7 +17,10 @@ include("head.php");
 <div class="section-header">
 </div>
 
-
+<div id="welcomeJustcreate">
+	Welcome to your Dashboard<br/>
+	<span>by Just Create</span>
+</div>
 
 
 

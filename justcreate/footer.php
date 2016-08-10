@@ -15,7 +15,7 @@
         <footer id="footer">
         
           <main class="main">
-            <p><?php echo $backoffice['diseno_web'][$_SESSION['bo_idioma']]; ?>: <a href="http://www.latevaweb.com/" target="_blank" title="Diseño web">La Teva Web</a></p>
+            <p></p>
           </main>
           
           <aside class="side">

@@ -11,6 +11,7 @@
 /* NORMALIZES Browers Styles */
 * {
 	margin:0;padding:0; /* removes defaults from all elements */
+	    box-sizing: border-box;
 } 
 ul {
 	list-style:none; /* removes list-styles from lists */
@@ -59,7 +60,7 @@ html{
 	margin:0;
 }
 .container {
-	width:978px;
+	width: 100%;
 	margin:0 auto;
 	position: relative;
 	padding:0;
@@ -71,16 +72,22 @@ html{
 ---------------------------------------------------------
 */
 #header {
-	position:relative;
-	width:100%;
-	margin:0;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	float: left;
+    background: #fff;
+    z-index: 90;
 }
 .logo { 
-	display:table;
-	float:left;
-	width:200px;
-	height:100px;
-	margin:0;
+	display: table;
+	float: left;
+	width: 180px;
+	height: 180px;
+	margin: 0;
+	position: fixed;
+	background: #ccc;
+	top: 0;
 }
 .logo a{display:table-cell;float:left;vertical-align: bottom;}
 .logo a:hover{border:0;}
@@ -102,6 +109,9 @@ html{
 	position:relative;
 	float:left;
 	width:100%;
+	padding-left: 295px;
+    margin-top: 50px;
+    padding-right: 50px;
 }
 div.main{
 	float:right;
@@ -345,6 +355,7 @@ body {
 aside, main, div, section, article, nav{}
 #wrapper{
 	background:#FFF;
+	min-height: 100vh;
 }
 #header {
 	font-size:1.2em;
@@ -561,7 +572,8 @@ td {
 	font-size: 1em;
 	/*padding:.3em 0;*/
 	padding:.3em .3em .6em ;
-	border-top:1px dotted #DDD;
+	/*border-top:1px dotted #DDD;*/
+
 }
 td.pic-col{
 	width:80px;
@@ -587,6 +599,7 @@ td.erase-col input[type="checkbox"]{
 	display: inline-block;
 }
 
+.none { display: none; }
 /* END TABLES
 ---------------------------------------------------------
 */
@@ -624,26 +637,33 @@ td.erase-col input[type="checkbox"]{
 ---------------------------------------------------------
 */
 #nav {
-	float:left;
-	width:100%;
-	margin:1em 0 2em;
-	border-top:1px solid #DDD;
-	padding:.3em 0 0 0;
-	color:#232323;
+	float: left;
+    width: 180px;
+    /*margin: 1em 0 2em;*/
+    border-top: 1px solid #DDD;
+    color: #232323;
+    position: absolute;
+    padding: 190px 0 0 20px;
+    z-index: 50;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    position: fixed;
 }
 .icon-menu{
 	display:none;
 }
 #nav ul {
 	float:left;
-	width:100%;	
+	width:180px;	
 	margin:0;
 	padding:0;
+	position: fixed;
 }
 #nav li {
 	float:left;
 	position:relative;
-	width:15.5%;
+	width: 180px;
 	margin:0 1% 0 0;
 	padding:0;
 	font-family:'open_sanslight', sans-serif;
@@ -652,8 +672,18 @@ td.erase-col input[type="checkbox"]{
 #nav li strong{
 	float:left;
 	width:100%;
-	padding:.3em 0 .3em 0;	
+	padding:.3em 0 .3em 0;
+    margin-top: 10px;	
 }
+
+#nav li ul {
+	float: left;
+	width: 140px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
 #nav li li{
 	float:left;
 	clear:left;
@@ -664,9 +694,9 @@ td.erase-col input[type="checkbox"]{
 #nav li a {
 	float:left;
 	width:95%;
-	color:#000;
+	color:#fff;
 	padding:.3em 0;
-	border-top:1px dotted #DDD;
+    border-top: 1px solid #484848;
 }
 #nav li a:hover {
 	background: url(../images/nav/bgNav.gif) repeat-x; 
@@ -1402,9 +1432,16 @@ ul#keys_menu{margin:0;}
 
 
 /* NUEVO REGISTRO */
+.tbJustcreate {
+    position: absolute;
+    right: 280px;
+    width: 300px;
+        top: 0;
+}
+
 .nuevoRegistro {
-    background: none repeat scroll 0 0 #f5f5f5;
-    border: 1px solid #ddd;
+    /*background: none repeat scroll 0 0 #f5f5f5;*/
+    /*border: 1px solid #ddd;*/
     bottom: 0;
     position: fixed;
     width: 978px;
@@ -1414,7 +1451,7 @@ ul#keys_menu{margin:0;}
     /*width:320px;*/
     border:0;
     padding: 10px 20px 20px 20px;
-    border-left:1px solid #DDD;
+    /*border-left:1px solid #DDD;*/
     vertical-align: top;
 }
 .nuevoRegistro td:first-child {
@@ -1635,3 +1672,19 @@ ul#keys_menu li a{margin:0}
 
 
 
+.logoJust {
+    position: absolute;
+    bottom: 30px;
+}
+
+#welcomeJustcreate {	
+    color: #000;
+	text-align: left;
+	font-size: 40px;
+}
+
+#welcomeJustcreate span{	
+	color: #ccc;
+	text-align: left;
+	font-size: 20px;
+}

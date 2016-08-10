@@ -36,14 +36,14 @@ if (get_magic_quotes_gpc() === 1){
 }
 
 //DEFINICIONES PARA EL SITIO
-define("MAILTO","admnistracion@bpmabogados.es"); //Email donde se envia el formulario de contacto
+define("MAILTO"," "); //Email donde se envia el formulario de contacto
 define("IDIOMADEFAULT","es"); //Idioma por defecto
 define("PORPAGINA",5); //Numero de noticias a mostrar en la paginacion de noticias_xx.php
 define("LATERAL",4); //Numero de noticias que aparecen en el historico en la pagina de noticia_xx.php
-define("CLIENTE","BPM Abogados SL"); //Nombre del cliente que pintamos en el backoffice, legal y contacto
-define("BRAND","BPM Abogados"); //Nombre del cliente que pintamos en el backoffice, legal y contacto
-define("NIF","B63581441"); //Legal
-define("PHONE","93 342 64 66"); //Legal y contacto
+define("CLIENTE","carlosgarciacastilla.com"); //Nombre del cliente que pintamos en el backoffice, legal y contacto
+define("BRAND","carlosgarciacastilla.com"); //Nombre del cliente que pintamos en el backoffice, legal y contacto
+define("NIF"," "); //Legal
+define("PHONE"," "); //Legal y contacto
 define("TINY_IMG","/images/pics"); //Ruta DESDE LA RAIZ DEL DOMINIO (en este caso hosteum.com)
 
 ?>

@@ -17,7 +17,7 @@
         <div class="col03">
                 <ul>
                     <li><em><?php echo $backoffice['usuario'][$_SESSION['bo_idioma']];?></em>: <?php echo $_SESSION['username'];?> &#8212; <a href="secure/logout.php" class="btn-logout"><?php echo $backoffice['desconectar'][$_SESSION['bo_idioma']];?></a></li>
-                    <li><em><?php echo $backoffice['fecha'][$_SESSION['bo_idioma']];?></em>: <?php setlocale(LC_ALL, 'es_ES'); echo strftime("%d %h %Y");?></li>
+                    <li><em><?php echo $backoffice['fecha'][$_SESSION['bo_idioma']];?></em>: <?php setlocale(LC_ALL, 'es_ES'); date_default_timezone_set('Europe/Madrid'); echo strftime("%d %h %Y");?></li>
                 </ul>
       	</div>
         
@@ -39,7 +39,7 @@
             </select>
             </form>
         </div>
-        
+        </header> <!-- /HEADER -->
         <!-- NAV -->
         <nav id="nav">
         	<div id="menuResponsive" class="icon-menu"></div>
@@ -63,14 +63,15 @@
                     <li><a href="slide.php?action=update&id=1">Editar</a></li>
                   </ul>
                 </li>
-                <?php
-				if($_SESSION['textos'] == 1){
-				?>
                 <li><strong><?php echo $backoffice['menu_textos'][$_SESSION['bo_idioma']]; ?></strong>
                   <ul>
                     <li><a href="textos.php"><?php echo $backoffice['l_listado'][$_SESSION['bo_idioma']];?></a></li>
                   </ul>
                 </li>
+                <?php
+				if($_SESSION['textos'] == 1){
+				?>
+                <!-- PONER SECCION QUE NO SE QUIERA SEGUN EL ROL (antes estaban los textos) -->
                 <?php
 				}
 				?>
@@ -105,10 +106,10 @@
 				}
 				?>
             </ul>
+            <div class="logoJust"><?php echo $backoffice['diseno_web'][$_SESSION['bo_idioma']]; ?>: <a href="http://www.justcreate.io/" target="_blank" title="Diseño web">Just Create</a></div>
         </nav>
         <!-- /NAV -->
-    </header>
-    <!-- /HEADER -->
+   
     
     <!-- BODY CONTENT -->
     <div id="content">
